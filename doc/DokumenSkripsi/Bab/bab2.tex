@@ -1,16 +1,16 @@
 %versi 2 (8-10-2016)
 \chapter{Dasar Teori}
 \label{chap:Dasar Teori}
-Pada bab ini akan diuraikan teori-teori yang berhubungan dengan pembangunan pohon kurikulum. Teori-teori tersebut adalah teori tentang pengertian graph, DOT language, dan visualisasi pohon menggunakan \textit{vis.js}.
+Pada bab ini akan diuraikan teori-teori yang berhubungan dengan pembangunan pohon kurikulum. Teori-teori tersebut adalah teori tentang pengertian graf,data terbuka, \textit{JSON}, \textit{DOT language}, dan visualisasi pohon menggunakan \textit{vis.js}.
 
-\section{Graph}
-\label{sec: Graph}
+\section{Graf}
+\label{sec: Graf}
 
-\subsection{Definisi Graph}
-\label{sec: Definisi Graph}
+\subsection{Definisi Graf}
+\label{sec: Definisi Graf}
 Suatu graph didefinisikan oleh himpunan verteks dan himpunan sisi (edge).
 Verteks menyatakan entitas-entitas data dan sisi menyatakan keterhubungan antara
-verteks. Biasanya untuk suatu graph G digunakan notasi matematis. 
+verteks. Biasanya untuk suatu graf G digunakan notasi matematis. 
 \begin{lstlisting}
 G=(V,E)
 G = Graph
@@ -46,8 +46,62 @@ dari w ke v.
 Pada graph berarah, bila simpul v \textit{adjacent} dengan simpul w, maka simpul v adalah \textit{successor} simpul w, dan simpul w adalah \textit{predecessor} dari simpul v.
 \end{enumerate}
 
+\section{Data Terbuka}
+\label{sec: Data Terbuka}
+Teknologi sekarang memungkinkan untuk membangun layanan yang menjawab pertanyaan-pertanyaan secara otomatis. Sebagian besar data yang diperlukan untuk menjawab pertanyaan-pertanyaan dihasilkan oleh badan-badan publik. Namun, seringkali data yang diperlukan belum tersedia dalam bentuk yang mudah digunakan. Gagasan dari data terbuka mengarah kepada informasi di mana setiap orang bebas untuk mengakses dan menggunakan ulang untuk berbagai tujuan - sudah bergulir dalam beberapa tahun ini.  	
+
+\subsection{Apa itu Data Terbuka}
+\label{sec: Apa itu Data Terbuka}
+Data terbuka adalah data yang dapat digunakan secara bebas, dimanfaatkan, dan didistribusikan kembali oleh siapapun tanpa syarat, kecuali dengan mengutip sumber dan pemilik data. Selain itu, seluruh data yang dipublikasikan harus mengikuti peraturan perundang-undangan yang berlaku. Kriteria penting dari data terbuka adalah:
+\begin{enumerate}
+\item Ketersediaan dan Akses
+Data harus tersedia utuh dan bebas biaya. Akan lebih baik jika data dapat diunduh melalui internet. Data juga harus tersedia dalam bentuk yang mudah digunakan dan dapat diolah kembali.
+\item Penggunaan dan Pendistribusian 
+Data yang digunakan dan didistribusikan kembali harus memenuhi syarat-syarat yang telah ditentukan.
+\item Partisipasi Universal
+Setiap orang bebas menggunakan dan mendistribusikan kembali \textit{dataset}. Tidak diperkenankan adanya diskriminasi atas bidang usaha, orang, atau kelompok.
+\end{enumerate}
+
+Semua kriteria yang ada di dalam data terbuka sangat penting karena menunjukkan kejelasan tentang apa yang dimaksud dengan terbuka itu sendiri. Istilah yang digunakan untuk menjelaskan ketiga kriteria data terbuka adalah \textit{interoperabilitas}. Interoperabilitas sangat penting karena memungkinkan komponen-komponen yang berbeda untuk bisa bekerja sama. Kemampuan untuk mengkomponenisasi komponen-komponen sangatlah esensial untuk membangun sistem yang besar dan kompleks. Tanpa \textit{interoperabilitas} hal ini menjadi tidak mungkin di mana kemampuan untuk berkomunikasi (lintas operasi) sangat berpengaruh terhadap keberhasilan suatu rencana.
+
+Inti dari sebuah "keumuman" \textit{data} merupakan salah satu bagian dari materi "terbuka". \textit{Interoperabilitas} ini merupakan komponen penting untuk merealisasikan praktik utama manfaat dari "keterbukaan": Peningkatan dramatis kemampuan untuk mengkombinasikan sekumpulan data berbeda secara bersama-sama sehingga merangsang pengembangan produk dan layanan yang lebih baik. keterbukaan dapat memastikan bahwa ketika ada dua kumpulan data dari dua sumber berbeda, maka kita dapat menggabungkan data tersebut secara bersama-sama, dan memastikan bahwa data yang kita dapat informasinya benar.
+
+\subsection{Mengapa Data Terbuka}
+\label{sec: Mengapa Data Terbuka}
+Data terbuka adalah sumber daya luar biasa yang belum dimanfaatkan sepenuhnya. Banyak individu dan organisasi mengumpulkan berbagai jenis data berbeda dalam rangka untuk melakukan tugas mereka. Pemerintah sangat signifikan dalam hal ini, tidak hanya karena kuantitas dan sentralitas dari data yang dikumpulkan, tetapi juga karena sebagian besar dari data pemerintah adalah bersifat publik secara hukum, dan oleh karena itu bisa dibuat terbuka dan tersedia untuk orang lain untuk dipergunakan. hal itu menjadi menarik karena banyak individu atau kelompok yang ingin mengetahui data yang ada. 
+
+Ada banyak area di mana kita bisa mengharapkan data terbuka untuk menjadi sebuah nilai, dan menjadi contoh bagaimana data terbuka telah digunakan. Ada juga kelompok dengan banyak orang berbeda dan organisasi yang dapat meraih keuntungan dari ketersediaan data yang terbuka, termasuk pemerintah itu sendiri. Pada saat yang sama adalah mustahil untuk memprediksi secara tepat bagaimana dan di mana nilai akan dibuat di masa depan. Sifat alami dari inovasi adalah bahwa pengembangan seringkali datang dari tempat yang tidak mungkin. Hal ini sudah dimungkinkan dengan merujuk pada sejumlah data terbuka yang telah menciptakan nilai. Beberapa nilai ini meliputi: 
+\begin{itemize}
+\item Transparansi dan kendali
+\item Partisipasi
+\item Penguatan mandiri
+\item Inovasi
+\item Efisiensi dan Efektivitas lebih baik dari layanan yang sudah ada
+\item Pengukuran pengaruh dari kebijakan-kebijakan
+\item Pengetahuan baru dari kombinasi sumber data dan pola-pola dalam volume data yang besar
+\end{itemize}
+
+\subsection{Cara Membuka Data}
+\label{sec: Cara Membuka Data}
+Data Terbuka dapat dibuka para pemegang data. Para pemegang data dapat melakukannya secara mendasar, tetapi juga mencakup masalah-masalah yang tersembunyi dan menjebak. Terdapat tiga aturan kunci yang kami rekomendasikan saat membuka data:
+\begin{enumerate}
+\item Jadikan lebih praktis.
+\item Terlibat dari awal dan melibatkan diri sesering mungkin.
+\item Mengatasi kekhawatiran umum dan kesalahpahaman. 
+\end{enumerate}
+
+Ada empat langkah utama dalam membuat data terbuka, yang masing-masing akan dibahas secara rinci di bawah ini. Langkah-langkah tersebut adalah yang paling memungkinkan - banyak dari langkah-langkah tersebut dapat dilakukan secara bersamaan. 
+\begin{enumerate}
+\item 
+\end{enumerate}
+
+\section{\textit{JSON}}
+\label{sec: JSON}
+
+JSON merupakan suatu syntax atau format untuk menyimpan data atau digunakan dalam sebuah proses pertukaran data. 
+
 \section{DOT Language}
-\label{secl : DOT Language}
+\label{sec: DOT Language}
 
 
 \subsection{Dasar Menggambar Grafik}
