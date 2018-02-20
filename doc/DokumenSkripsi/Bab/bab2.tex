@@ -19,8 +19,8 @@ E = Sisi atau garis, atau Edge
 \end{lstlisting}
 
 V adalah himpunan \textit{verteks} dan E himpunan sisi yang terdefinisi antara pasangan-pasangan verteks. Sebuah sisi antara verteks x dan y ditulis {x, y}. Suatu graph H = (V1,E1) disebut subgraph dari graph G jika V1 adalah himpunan bagian dari V dan E1 himpunan bagian dari E.
-\subsection{Istilah dalam Graph}
-\label{sec: Istilah dalam Graph}
+\subsection{Istilah dalam Graf}
+\label{sec: Istilah dalam Graf}
 \begin{enumerate}
 \item \textit{Incident}
 Jika e merupakan busur dengan simpul-simpulnya adalah v dan w yang
@@ -98,37 +98,122 @@ Ada empat langkah utama dalam membuat data terbuka, yang masing-masing akan diba
 \section{\textit{JSON}}
 \label{sec: JSON}
 
-JSON merupakan suatu syntax atau format untuk menyimpan data atau digunakan dalam sebuah proses pertukaran data. 
+JSON \textit{(JavaScript Object Notation)} adalah format pertukaran data. JSON merupakan format teks yang tidak bergantung pada bahasa pemprograman apapun. Kenapa \textit{JSON}? Karena ukuran datanya lebih kecil dibanding dengan XML, sifatnya \textit{"self-describing"} dan mudah dimengerti. Formatnya berbasis teks dan terbaca manusia serta digunakan untuk mempresentasikan struktur data sederhana. Format teks dari JSON itu sendiri identik dengan kode untuk membuat objek \textit{JavaScript} memiliki kesamaan dengan Java Script, hanya saja JSON lebih mudah dimengerti. 
+
+\subsection{Struktur JSON}
+\label{sec: Struktur JSON}
+JSON terbuat dari dua struktur:
+\begin{enumerate}
+\item Kumpulan pasangan nama/nilai. Pada beberapa bahasa, hal ini dinyatakan sebagai objek \textit{(object)}, rekaman \textit{(record)}, struktur \textit{(struct)}, kamus \textit{(dictionary)}, tabel hash\textit{(hash table)}, daftar berkunci \textit{(keyed list)}, atau \textit{associative array}.
+\item Daftar nilai terurutkan \textit{(an ordered list of values)}. Pada kebanyakan bahasa, hal ini dinyatakan sebagai larik \textit{(array)}, vektor \textit{(vector)}, daftar \textit{(list)}, atau urutan \textit{(sequence)}. 
+\end{enumerate}
+
+\textit{JSON} menggunakan bentuk sebagai berikut:
+\begin{enumerate}
+\item \textbf{Objek} adalah sepasang nama/nilai yang tidak terurutkan. Objek dimulai dengan { (kurung kurawal buka) dan diakhiri dengan } (kurung kurawal tutup). Setiap nama diikuti dengan : (titik dua) dan setiap pasangan nama/nilai dipisahkan oleh , (koma).
+\begin{figure}[H]
+		\centering
+		\includegraphics[scale = 0.5]{1.png}
+		\caption{Objek}
+		\label{}
+\end{figure}	
+
+\item \textbf{Larik} adalah kumpulan nilai yang terurutkan. Larik dimulai dengan [ (kurung kotak buka) dan diakhiri dengan ] (kurung kotak tutup). Setiap nilai dipisahkan oleh , (koma).
+\begin{figure}[H]
+		\centering
+		\includegraphics[scale = 0.5]{2.png}
+		\caption{Larik}
+		\label{}
+\end{figure}	
+
+\item \textbf{Nilai}, dapat berupa sebuah \textit{string} dalam tanda kutip ganda, atau angka, atau true atau false atau null, atau sebuah objek atau sebuah larik. Struktur-struktur tersebut dapat disusun bertingkat.
+\begin{figure}[H]
+		\centering
+		\includegraphics[scale = 0.5]{3.png}
+		\caption{Nilai}
+		\label{}
+\end{figure}	
+
+
+\end{enumerate}
+
+\subsection{Contoh Sintaks}
+\label{sec: Contoh Sintaks}
+Contoh berikut menunjukkan representasi JSON untuk suatu objek yang mendeskripsikan seseorang.
+\begin{lstlisting}
+{ 
+"namaDepan": "Budi", 
+"namaBelakang": "Subudi", 
+"alamat": { 
+	"namaJalan": "Jl. Sudirman 15A", 
+	"kota": "Jakarta Selatan", 
+	"provinsi": "DKI Jakarta", 
+	"kodePos": 11111 }, 
+	"nomerTelepon": [ 
+	"021 555-1234", 
+	"021 555-4567" 
+	] 
+}
+\end{lstlisting}
+
+
+
 
 \section{DOT Language}
 \label{sec: DOT Language}
+\textit{DOT} adalah bahasa yang dapat digunakan untuk menampilkan grafik secara teks, sehingga dapat diproses melalui titik untuk membuat grafik sebagai representasi grafis dalam format yang berbeda seperti .ps, .pdf, dll. DOT telah dikembangkan sebagai bagian dari proyek \textit{Graphviz}, yang merupakan kumpulan alat untuk visualisasi grafik. 
 
+\subsection{Dasar Menggambar Graf}
+\label{sec: Dasar Menggambar Graf}
+Dot mengambil empat langkah utama dalam menggambar grafik. Langkah pertama menetapkan diskrit peringkat ke node dalam gambar atas ke bawah, menentukan peringkat di koordinat Y. Tepi yang membentang lebih banyak dari satu peringkat dipecah menjadi rantai simpul dan tepi unit. Langkah kedua \textit{node} dalam barisan untuk menghindari penyeberangan. Langkah ketiga menetapkan koordinat \textit{node} X untuk disimpan dibaris terpendek. Langkah terakhir rute tepi splines. Grafik menggunakan dot memiliki tiga jenis \textit{item}: grafik, simpul, dan tepi. Grafik sendiri memiliki dua bentuk yaitu grafik (tidak diarahkan) atau digraph (diarahkan). Karena dot membuat \textit{layout} grafik yang diarahkan maka contoh dalam kasus ini menggunakan digraph. 
 
-\subsection{Dasar Menggambar Grafik}
-\label{sec: Dasar Menggambar Grafik}
+Gambar graph1 adalah contoh grafik dalam bahasa dot. Baris 1 memberi nama dan jenis grafik. Baris berikut membuat node, tepi, atau subgraf, dan atur atribut. Nama merupakan identifier C, nomor, atau kutipan C. Sebuah simpul diciptakan pertama kali namanya muncul di \textit{file}. Tepian dibuat saat node berada bergabung dengan operator tepi ->. Pada contoh, baris 2 membuat tepi lalu mengurai dari \textit{parse} ke \textit{execute}. Untuk menjalankan dot pada file ini (dimisalkan graph1.dot) dapat mengetikan $ dot -Tps graph1.dot -o graph1.ps $ dan akan menghasilkan gambar graph1. 
+\begin{lstlisting}
+1: digraph G {
+2: main -> parse -> execute;
+3: main -> init;
+4: main -> cleanup;
+5: execute -> make_string;
+6: execute -> printf
+7: init -> make_string;
+8: main -> printf;
+9: execute -> compare;
+10: }
+\end{lstlisting}
 
+\begin{figure}[H]
+		\centering
+		\includegraphics[scale = 0.5]{graph1.png}
+		\caption{Gambar Graph1}
+		\label{}
+\end{figure}	
 
 \subsection{Atribut Menggambar}
 \label{sec: Atribut Menggambar}
 
-\subsubsection{Bentuk dan Label}
-\label{sec: Bentuk dan Label}
 
-\subsubsection{Bentuk Grafik}
-\label{sec: Bentuk Grafik}
+\subsection{Subgraf dan Pengelompokan}
+\label{sec: Subgraf dan Pengelompokan}
+Subgraf memiliki tiga peran di \textit{Graphviz}. Pertama, subgraf dapat digunakan untuk mewakili struktur grafik, yang menunjukkan bahwa simpul dan tepi tertentu harus dikelompokkan bersama. Informasi pada subgraf ditentukan secara semantik tentang komponen grafik. Tepi dibuat dari setiap simpul di sebelah kiri ke setiap simpul di sebelah kanan. Contohnya sebagai berikut 
+\begin{lstlisting}
+A -> {B C} 
 
-\subsubsection{Menggambar Ukuran dan Jarak}
-\label{sec: Menggambar Ukuran dan Jarak}
+sama dengan
+A -> B
+A -> C
+\end{lstlisting}
 
-\subsubsection{Penempatan Sisi dan Simpul}
-\label{sec: Penempatan Sisi dan Simpul}
+Kedua, subgraf dapat memberikan konteks untuk mengatur atribut. Sebagai contoh, sebuah subgraf dapat menentukan bahwa warna biru adalah warna \textit{default} untuk semua node yang didefinisikan di dalamnya. Dalam konteks gambar grafik, contohnya sebagai berikut
 
-\subsection{Node Ports}
-\label{sec: Node Ports}
+\begin{lstlisting}
+subgraf {
+peringkat = sama; A; B; C;
+}
+\end{lstlisting}
 
-\subsubsection{Pengelompokan}
-\label{sec: Pengelompokan}
+Subgraf ini menentukan bahwa simpul A, B dan C semuanya harus ditempatkan pada rangking yang sama jika ditarik menggunakan titik.
 
+Ketiga untuk subgraf secara langsung melibatkan bagaimana grafik akan ditata oleh mesin. Jika nama subgraf dimulai dengan \textit{cluster}, \textit{Graphviz} mencatat subgraf sebagai subgraf \textit{cluster} khusus. Jika didukung, mesin akan melakukan tata letak sehingga simpul milik cluster digambar bersama, dengan keseluruhan gambar cluster yang ada di dalam persegi panjang yang melintang. Subgraf \textit{cluster} bukan bagian dari bahasa DOT, namun hanya konvensi sintaks yang dipatuhi oleh mesin.  
 
 \section{Visualisasi Graph dengan Viz.js}
 \label{sec: Visualisasi Graph dengan Viz.js}
