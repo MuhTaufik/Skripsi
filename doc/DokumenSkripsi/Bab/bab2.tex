@@ -92,7 +92,22 @@ Data Terbuka dapat dibuka para pemegang data. Para pemegang data dapat melakukan
 
 Ada empat langkah utama dalam membuat data terbuka, yang masing-masing akan dibahas secara rinci di bawah ini. Langkah-langkah tersebut adalah yang paling memungkinkan - banyak dari langkah-langkah tersebut dapat dilakukan secara bersamaan. 
 \begin{enumerate}
-\item 
+\item \textbf{Pilih Kumpulan Data(s}) \\
+Pemilihan kumpulan-kumpulan data(s) yang direncanakan untuk menjadikannya terbuka merupakan langkah pertama – meskipun perlu diingat bahwa seluruh proses pembukaan data akan berulang dan dapat kembali ke langkah ini bila mengalami masalah di kemudian hari. Jika sudah mengetahui persis kumpulan-kumpulan data(s) maka dapat merencanakan untuk dibuka dan dapat langsung ke bagian berikutnya. Bagaimanapun juga, dalam banyak kasus, terutama untuk lembaga-lembaga yang besar, untuk berfokus pada memilih kumpulan data menjadi sebuah tantangan. 
+\item \textbf{Menerapkan sebuah Lisensi Terbuka (Keterbukaan Resmi)} \\
+Di kebanyakan yurisdiksi terdapat hak kekayaan intelektual di dalam data yang mencegah pihak ketiga dari penggunaannya, penggunaan ulang dan pendistribusian data tanpa izin eksplisit. Bahkan di tempat di mana keberadaan hak hukum serba tidak pasti, penting untuk menerapkan lisensi demi sebuah kejelasan. Dengan demikian, jika kita berencana untuk membuat data tersedia, maka harus menaruh lisensi di atasnya dan jika data menjadi terbuka ini bahkan lebih penting lagi. 
+\item \textbf{Menjadikan Data Terseddia}\\
+Data terbuka membutuhkan keterbukaan secara teknis sebagaimana keterbukaan yang resmi secara hukum. Khususnya, data harus bisa tersedia secara masal dalam format (yang dapat dibaca mesin).
+\begin{itemize}
+\item \textbf{Available} \\
+Data seharusnya dihargai tidak lebih dari biaya reproduksi yang wajar, sebaiknya dijadikan sebagai unduhan gratis dari internet. Model penghargaan ini dapat dicapai karena lembaga anda tidak perlu menangani biaya apapun saat menyediakan data untuk digunakan.
+\item \textbf{In Bulk}\\
+Data harus tersedia dalam kumpulan yang lengkap. Jika anda memiliki daftar yang dikoleksi di bawah aturan undang-undang, seluruh daftar tersebut harus tersedia untuk diunduh.
+\item \textbf{In an open, machine-readable format}\\
+Penggunaan-ulang data yang disediakan oleh sektor publik tidak seharusnya tunduk pada pembatasan paten. 
+\item \textbf{Jadikan hingga Mudah untuk ditemukan} \\
+terbitkan di web dan mungkin kelola sebuah pusat katalog untuk membuat daftar dari kumpulan data terbuka.
+\end{itemize}
 \end{enumerate}
 
 \section{\textit{JSON}}
@@ -190,6 +205,37 @@ Gambar graph1 adalah contoh grafik dalam bahasa dot. Baris 1 memberi nama dan je
 
 \subsection{Atribut Menggambar}
 \label{sec: Atribut Menggambar}
+Dalam membuat graf dibutuhkan beberapa atribut untuk menyempurnakan gambar. Atribut tersebut berisi 
+\begin{enumerate}
+\item Bentuk dan Label.\\
+Pada bentuk dan label nantinya akan ditentukan \textit{node} akan berbentuk apa dan label pada node akan berisi apa. Secara \textit{default} bentuk dari node sendiri adalah elips. Tetapi ada bentuk lain yang diberikan untuk \textit{node} yaitu kotak, lingkaran, polygon, dll. 
+\item Tampilan Graf\\
+Simpul dan tepi memiliki atribut warna dan gaya. Penggunaan warna dalam membuat graf memiliki beberapa syarat. Pertama hindari menggunakan terlalu banyak warna cerah. Kedua, ketika node dipenuhi warna gelap label nampaknya lebih mudah dibaca dengan \textit{fontcolor} = putih dan \textit{fontname} = \textit{Helvetica}. Ketiga, menentukan ruang warna dengan mendefinisikan \textit{nodecolor}, \textit{edgecolor}, atau \textit{graphcolor} dalam file library. Misalnya, untuk menggunakan warna RGB, letakkan baris berikut di file lib.ps. / nodecolor {setrgbcolor} bind def. Gunakan opsi baris perintah -l untuk memuat file ini. $ dot -Tps -l lib.ps file.dot -o file.ps $
+\item Ukuran Gambar dan Jarak\\
+Seringkali gambar yang dibuat dengan ukuran dan pemisahan \textit{nodes default} terlalu besar untuk target atau untuk ruang yang diizinkan untuk gambar dalam dokumen. Ada beberapa cara untuk mencoba mengatasi masalah ini. Pertama, melihat bagaimana titik pada ukuran tata letak akhir. Tata letak awalnya dibuat secara internal dengan ukuran awal, dengan menggunakan pengaturan \textit{default}. Secara default, \textit{nodes} paling sedikit 0,75 inci dengan lebar 0,5; \textit{font} adalah 14, \textit{nodes} dipisahkan paling sedikit 0,25 dan diberi peringkat oleh 0,5 Tidak ada batasan ukuran atau aspek rasio gambar, jadi jika grafiknya besar, tata letaknya juga besar. Jika tidak menentukan ukuran atau rasio, maka ukuran awal akan dicetak. Cara termudah untuk mengontrol ukuran output gambar adalah dengan mengatur ukuran = x; y pada file grafik (atau pada baris perintah menggunakan -G). Ini menentukan kotak pembatas tata letak akhir. 
+\end{enumerate}
+
+Tabel untuk atribut menggambar sebagai berikut
+\begin{figure}[H]
+		\centering
+		\includegraphics[scale = 0.5]{NodeA.png}
+		\caption{node attributes}
+		\label{}
+\end{figure}	
+
+\begin{figure}[H]
+		\centering
+		\includegraphics[scale = 0.5]{EdgeA.png}
+		\caption{edge attributes}
+		\label{}
+\end{figure}	
+
+\begin{figure}[H]
+		\centering
+		\includegraphics[scale = 0.5]{GrafA.png}
+		\caption{graph attributes}
+		\label{}
+\end{figure}	
 
 
 \subsection{Subgraf dan Pengelompokan}
@@ -215,6 +261,24 @@ Subgraf ini menentukan bahwa simpul A, B dan C semuanya harus ditempatkan pada r
 
 Ketiga untuk subgraf secara langsung melibatkan bagaimana grafik akan ditata oleh mesin. Jika nama subgraf dimulai dengan \textit{cluster}, \textit{Graphviz} mencatat subgraf sebagai subgraf \textit{cluster} khusus. Jika didukung, mesin akan melakukan tata letak sehingga simpul milik cluster digambar bersama, dengan keseluruhan gambar cluster yang ada di dalam persegi panjang yang melintang. Subgraf \textit{cluster} bukan bagian dari bahasa DOT, namun hanya konvensi sintaks yang dipatuhi oleh mesin.  
 
-\section{Visualisasi Graph dengan Viz.js}
-\label{sec: Visualisasi Graph dengan Viz.js}
+\section{Visualisasi Graf dengan Viz.js}
+\label{sec: Visualisasi Graf dengan Viz.js}
+Data terbuka adalah data yang terbuka. Tetapi jika dilihat lagi data terbuka yang dimaksud dalam konteks saat ini adalah data yang bebas diakses, data yang bebas digunakan kembali, dan data dalam format \textit{machine-readable}. Data yang bebas diakses dan bebas digunakan kembali sudah cukup jelas. Semua orang boleh dan diizinkan untuk mengakses dan menggunakan data tersebut untuk keperluannya masing-masing. Pada dasarnya data dalam format PDF, image, atau apapun yang bisa dilihat oleh manusia jika masuk ke dalam kriteria ini. Namun bisa dilihat dan dimengerti saja tidak cukup. Maka dari itu ada kriteria ketiga yaitu "data dalam format \textit{machine-readable}". Format \textit{machine-readable adalah} sebuah format yang memiliki struktur jelas, di mana satu data berada pada satu baris, dan dalam format terbuka (contohnya format CSV atau JSON). Tujuannya satu, agar data yang ada bisa dimengerti oleh mesin. Dalam hal ini komputer. Jika data dapat dimengerti oleh komputer, maka pengolahan data akan lebih baik, lebih cepat, lebih efisien dan lebih akurat.
 
+JSON sebagai salah satu format terbuka digunakan untuk membuat graf. Graf ini dihasilkan dengan menggunakan \textit{viz.js} yang merupakan mesin pembaca \textit{DOT}. \textit{DOT} sendiri dibuat mdengan melihat struktur JSON. Penulisan \textit{viz} sebagai visualisi graf itu sendiri sebgai berikut
+\begin{lstlisting}
+Viz(src, options={ format="svg", engine="dot", scale, images=[{ path, width, height }], totalMemory=16777216 })
+\end{lstlisting}
+\begin{itemize}
+\item \textit{src} adalah string yang mewakili grafik yang akan ditampilkan dalam bahasa \textbf{DOT}.
+\item \textit{options} \\
+\begin{itemize}
+\item \textit{format} menetapkan \textit{format} keluaran, dan hasilnya salah satu dari "svg", "xdot", "plain", "ps", "json", atau "png-image-element". 
+\item \textit{engine}, mengatur mesin \textit{Graphviz} untuk digunakan, salah satunya "circo", "dot", "fdp", "neato", "osage", or "twopi".
+\item \textit{scale}, menetapkan faktor skala untuk format "png-image-element".
+\item \textit{images}, menentukan dimensi gambar untuk digunakan saat membuat nodes dengan atribut gambar. 
+\item \textit{file}, menentukan file yang tersedia untuk \textit{Graphviz} menggunakan \textit{file system} dalam memori. Ini adalah array dari objek, {path, data}. File dibuat terhadap direktori kerja.
+\item \textit{total memory}, mengatur memori yang tersedia.
+\end{itemize}
+
+\end{itemize}
