@@ -8,14 +8,14 @@ Pada bab ini akan diuraikan teori-teori yang berhubungan dengan pembangunan poho
 
 \subsection{Definisi Graf}
 \label{sec: Definisi Graf}
-Suatu graf didefinisikan oleh himpunan verteks dan himpunan sisi (edge).\footnote{"Graf", Matematika Diskrit, Juli 2015}
+Suatu graf didefinisikan oleh himpunan verteks dan himpunan sisi \textit{(edge)}.\footnote{"Graf", Matematika Diskrit, Juli 2015}
 Verteks menyatakan entitas-entitas data dan sisi menyatakan keterhubungan antara
 verteks. Biasanya untuk suatu graf G digunakan notasi matematis. 
 \begin{lstlisting}
 G=(V,E)
 G = Graf
-V = Simpul atau vertex, atau node, atau titik
-E = Sisi atau garis, atau Edge
+V = Simpul atau verteks
+E = Sisi atau garis
 \end{lstlisting}
 
 V adalah himpunan \textit{verteks} dan E himpunan sisi yang terdefinisi antara pasangan-pasangan verteks. Sebuah sisi antara verteks x dan y ditulis {x, y}. Suatu graf H = (V1,E1) disebut subgraf dari graf G jika V1 adalah himpunan bagian dari V dan E1 himpunan bagian dari E.
@@ -239,6 +239,7 @@ Simpul dan tepi memiliki atribut warna dan gaya. Penggunaan warna dalam membuat 
 Seringkali gambar yang dibuat dengan ukuran dan pemisahan \textit{nodes default} terlalu besar untuk target atau untuk ruang yang diizinkan untuk gambar dalam dokumen. Ada beberapa cara untuk mencoba mengatasi masalah ini. Pertama, melihat bagaimana titik pada ukuran tata letak akhir. Tata letak awalnya dibuat secara internal dengan ukuran awal, dengan menggunakan pengaturan \textit{default}. Secara default, \textit{nodes} paling sedikit 0,75 inci dengan lebar 0,5; \textit{font} adalah 14, \textit{nodes} dipisahkan paling sedikit 0,25 dan diberi peringkat oleh 0,5 Tidak ada batasan ukuran atau aspek rasio gambar, jadi jika grafiknya besar, tata letaknya juga besar. Jika tidak menentukan ukuran atau rasio, maka ukuran awal akan dicetak. Cara termudah untuk mengontrol ukuran output gambar adalah dengan mengatur ukuran = x; y pada file grafik (atau pada baris perintah menggunakan -G). Ini menentukan kotak pembatas tata letak akhir. 
 
 Tabel untuk atribut menggambar sebagai berikut
+\begin{enumerate}
 
 \begin{table}[htbp]
 \begin{center}
