@@ -21,12 +21,40 @@ Perangkat lunak yang akan dibangun akan menghasilkan graf yang berbentuk pohon k
 Perangkat Lunak yang dibangun setelah menghasilkan pohon kurikulum akan menampilkan mata kuliah yang ada di kurikulum baru. Mata Kuliah akan berisi mata kuliah wajib, mata kuliah pilihan, dan mata kuliah pilihan wajib.
 \end{itemize}
 
+Struktur \textit{JSON} yang akan digunakan adalah dalam bentuk array yang di dalamnya memiliki objek.  
+Objek di dalam JSON ini menjadi acuan dalam membuat pohon kurikulum. Contoh penulisan \textit{JSON} sebagai berikut:
+
+\begin{lstlisting}
+[
+  {
+    "kodeMatkul": "AIF181101",
+    "namaMatkul": "Computational Thinking",
+    "tempuh": [],
+    "lulus": [],
+    "bersamaan": [],
+    "sks": 3,
+    "jenis": "wajib",
+    "semester": 1
+  }
+]
+\end{lstlisting}
+
+Pada bentuk di atas \textit{JSON} memiliki beberapa objek sebagai acuan.
+\begin{enumerate}
+\item \textbf{kodeMatkul}, berisikan kode matakuliah yang akan di ambil di dalam pembuatan pohon kurikulum.
+\item \textbf{namaMatkul}, berisikan nama mata kuliah yang ada di semester 1 sampai semester 8.
+\item \textbf{tempuh}, berisikan kode mata kuliah yang menunjukan mahasiswa sudah mengambil mata kuliah yang menjadi syarat atau belum. 
+\item \textbf{lulus}, \item \textbf{tempuh}, berisikan kode mata kuliah yang menunjukan mahasiswa sudah mengambil mata kuliah yang menjadi syarat dan lulus mata kuliah tersebut.
+\item \textbf{bersamaan}, berisikan kode mata kuliah yang menunjukan mahasiswa dapat mengambil mata kuliah yang memiliki syarat bersamaan dengan mata kuliah yang sudah tempuh.
+\item \textbf{sks}, menunjukkan berapa banyak tanggungan belajar mahasiswa.
+\item \textbf{jenis}, menunjukkan mata kuliah tersebut jenisnya wajib atau pilihan.
+\item \textbf{semester}, menunjukkan mata kuliah tersebut ada di semester berapa.
+\end{enumerate}
+
 \section{Kebutuhan Data Terbuka}
 \label{sec: Kebutuhan Data Terbuka}
+Tujuan utama dari Data Terbuka adalah memaksimalkan penggunaan data seluas-luasnya untuk menciptakan suatu nilai tambah. Untuk mencapai hal tersebut, Data Terbuka memberikan dua komponen dari keterbukaan, yaitu: terbuka secara teknis dan terbuka secara legal. 
 
-
-\section{JSON merepresentasikan Pohon Kurikulum}
-\label{sec: JSON merepresentasikan Pohon Kurikulum}
 
 
 \section{Spesifikasi Perangkat Lunak yang Dibangun}

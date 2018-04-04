@@ -1,13 +1,14 @@
 
 \chapter{Dasar Teori}
 \label{chap:Dasar Teori}
-Pada bab ini akan diuraikan teori-teori yang berhubungan dengan pembangunan pohon kurikulum. Teori-teori tersebut adalah teori tentang pengertian graf,data terbuka, \textit{JSON}, \textit{DOT language}, dan visualisasi pohon menggunakan \textit{vis.js}.
+Pada bab ini akan diuraikan teori-teori yang berhubungan dengan pembangunan pohon kurikulum. Teori-teori tersebut adalah teori tentang pengertian graf,data terbuka, \textit{JSON}, \textit{DOT language}, dan visualisasi pohon menggunakan \textit{viz.js}.
 
 \section{Graf}
 \label{sec: Graf}
 
 \subsection{Definisi Graf}
 \label{sec: Definisi Graf}
+~\cite{munir:02:graf}
 Suatu graf didefinisikan oleh himpunan verteks dan himpunan sisi \textit{(edge)}.\footnote{"Graf", Matematika Diskrit, Juli 2015}
 Verteks menyatakan entitas-entitas data dan sisi menyatakan keterhubungan antara
 verteks. Biasanya untuk suatu graf G digunakan notasi matematis. 
@@ -18,15 +19,15 @@ V = Simpul atau verteks
 E = Sisi atau garis
 \end{lstlisting}
 
-V adalah himpunan \textit{verteks} dan E himpunan sisi yang terdefinisi antara pasangan-pasangan verteks. Sebuah sisi antara verteks x dan y ditulis {x, y}. Suatu graf H = (V1,E1) disebut subgraf dari graf G jika V1 adalah himpunan bagian dari V dan E1 himpunan bagian dari E.
+V adalah himpunan verteks dan E himpunan sisi yang terdefinisi antara pasangan-pasangan verteks. Sebuah sisi antara verteks x dan y ditulis {x, y}. Suatu graf H = (V1,E1) disebut subgraf dari graf G jika V1 adalah himpunan bagian dari V dan E1 himpunan bagian dari E.
 \subsection{Istilah dalam Graf}
 \label{sec: Istilah dalam Graf}
 \begin{enumerate}
-\item \textit{Incident}
+\item \textit{Incident}\\
 Jika e merupakan busur dengan simpul-simpulnya adalah v dan w yang
 ditulis e=(v,w), maka v dan w disebut "terletak" pada e, dan e disebut incident
 dengan v dan w.
-\item \textit{Degree}
+\item \textit{Degree}\\
 Di dalam Graf ada yang disebut dengan \textit{Degree}, \textit{Degree} mempuyai 3 jenis antara lain :
 \begin{itemize}
 \item Degree dari suatu verteks x dalam \textit{undigraph} adalah jumlah busur yang
@@ -37,17 +38,19 @@ kepalanya incident dengan simpul tersebut, atau jumlah busur yang "masuk" atau m
 ekornya incident dengan simpul tersebut, atau jumlah busur yang "keluar"
 atau berasal dari simpul tersebut.
 \end{itemize}
-\item \textit{Adjacent}
+\item \textit{Adjacent}\\
 Pada graf tidah berarah, 2 buah simpul disebut adjacent bila ada busur yang
 menghubungkan kedua simpul tersebut. Simpul v dan w disebut adjacent. 
 Pada graf berarah, simpul v disebut adjacent dengan simpul w bila ada busur
 dari w ke v.
-\item \textit{Successor dan Predecessor}
+\item \textit{Successor dan Predecessor}\\
 Pada graf berarah, bila simpul v \textit{adjacent} dengan simpul w, maka simpul v adalah \textit{successor} simpul w, dan simpul w adalah \textit{predecessor} dari simpul v.
 \end{enumerate}
 
 \section{Data Terbuka}
 \label{sec: Data Terbuka}
+~\cite{open:04:terbuka}
+
 Teknologi sekarang memungkinkan untuk membangun layanan yang menjawab pertanyaan-pertanyaan secara otomatis.\footnote{\url{http://opendatahandbook.org/guide/id/introduction/}} Sebagian besar data yang diperlukan untuk menjawab pertanyaan-pertanyaan dihasilkan oleh badan-badan publik. Namun, seringkali data yang diperlukan belum tersedia dalam bentuk yang mudah digunakan. Gagasan dari data terbuka mengarah kepada informasi di mana setiap orang bebas untuk mengakses dan menggunakan ulang untuk berbagai tujuan - sudah bergulir dalam beberapa tahun ini.  	
 
 \subsection{Apa itu Data Terbuka}
@@ -64,7 +67,7 @@ Setiap orang bebas menggunakan dan mendistribusikan kembali \textit{dataset}. Ti
 
 Semua kriteria yang ada di dalam data terbuka sangat penting karena menunjukkan kejelasan tentang apa yang dimaksud dengan terbuka itu sendiri. Istilah yang digunakan untuk menjelaskan ketiga kriteria data terbuka adalah \textit{interoperabilitas}. Interoperabilitas sangat penting karena memungkinkan komponen-komponen yang berbeda untuk bisa bekerja sama. Kemampuan untuk mengkomponenisasi komponen-komponen sangatlah esensial untuk membangun sistem yang besar dan kompleks. Tanpa \textit{interoperabilitas} hal ini menjadi tidak mungkin di mana kemampuan untuk berkomunikasi (lintas operasi) sangat berpengaruh terhadap keberhasilan suatu rencana.
 
-Inti dari sebuah "keumuman" \textit{data} merupakan salah satu bagian dari materi "terbuka". \textit{Interoperabilitas} ini merupakan komponen penting untuk merealisasikan praktik utama manfaat dari "keterbukaan": Peningkatan dramatis kemampuan untuk mengkombinasikan sekumpulan data berbeda secara bersama-sama sehingga merangsang pengembangan produk dan layanan yang lebih baik. keterbukaan dapat memastikan bahwa ketika ada dua kumpulan data dari dua sumber berbeda, maka kita dapat menggabungkan data tersebut secara bersama-sama, dan memastikan bahwa data yang kita dapat informasinya benar.
+Inti dari sebuah "keumuman" data merupakan salah satu bagian dari materi "terbuka". \textit{Interoperabilitas} ini merupakan komponen penting untuk merealisasikan praktik utama manfaat dari "keterbukaan": Peningkatan dramatis kemampuan untuk mengkombinasikan sekumpulan data berbeda secara bersama-sama sehingga merangsang pengembangan produk dan layanan yang lebih baik. keterbukaan dapat memastikan bahwa ketika ada dua kumpulan data dari dua sumber berbeda, maka kita dapat menggabungkan data tersebut secara bersama-sama, dan memastikan bahwa data yang kita dapat informasinya benar.
 
 \subsection{Mengapa Data Terbuka}
 \label{sec: Mengapa Data Terbuka}
@@ -171,11 +174,10 @@ Contoh berikut menunjukkan representasi JSON untuk suatu objek yang mendeskripsi
 }
 \end{lstlisting}
 
-
-
-
 \section{DOT Language}
 \label{sec: DOT Language}
+~\cite{north:03:DOT}
+
 \textit{DOT} adalah bahasa yang dapat digunakan untuk menampilkan grafik secara teks, sehingga dapat diproses melalui titik untuk membuat grafik sebagai representasi grafis dalam format yang berbeda seperti .ps, .pdf, dll.\footnote{"Drawing Graphs with DOT", E Koutsofios, S North - 1991} DOT telah dikembangkan sebagai bagian dari proyek \textit{Graphviz}, yang merupakan kumpulan alat untuk visualisasi grafik. 
 
 \subsection{Dasar Menggambar Graf}
@@ -238,8 +240,9 @@ Simpul dan tepi memiliki atribut warna dan gaya. Penggunaan warna dalam membuat 
 \item Ukuran Gambar dan Jarak\\
 Seringkali gambar yang dibuat dengan ukuran dan pemisahan \textit{nodes default} terlalu besar untuk target atau untuk ruang yang diizinkan untuk gambar dalam dokumen. Ada beberapa cara untuk mencoba mengatasi masalah ini. Pertama, melihat bagaimana titik pada ukuran tata letak akhir. Tata letak awalnya dibuat secara internal dengan ukuran awal, dengan menggunakan pengaturan \textit{default}. Secara default, \textit{nodes} paling sedikit 0,75 inci dengan lebar 0,5; \textit{font} adalah 14, \textit{nodes} dipisahkan paling sedikit 0,25 dan diberi peringkat oleh 0,5 Tidak ada batasan ukuran atau aspek rasio gambar, jadi jika grafiknya besar, tata letaknya juga besar. Jika tidak menentukan ukuran atau rasio, maka ukuran awal akan dicetak. Cara termudah untuk mengontrol ukuran output gambar adalah dengan mengatur ukuran = x; y pada file grafik (atau pada baris perintah menggunakan -G). Ini menentukan kotak pembatas tata letak akhir. 
 
-Tabel untuk atribut menggambar sebagai berikut
-
+Tabel untuk atribut menggambar sebagai berikut:
+\begin{enumerate}
+\item \textit{Node Attributes}, Pada Tabel di bawah ini menunjukkan apa saja isi dari \textit{Node Attributes}
 \begin{table}[htbp]
 \begin{center}
 \caption{\textit{Node Attributes}}
@@ -247,13 +250,13 @@ Tabel untuk atribut menggambar sebagai berikut
 \hline
   Nama & Defaulf & Value \\
 \hline
-  color & black & node shape color \\
-  fontcolor & black & type face color \\
-  fontname & times-roman & PostScript font family \\
-  fontsize & 14 & point size of label \\
-  height, width & .5,.75 & height and width in inches \\
-  label & node name & any string \\
-  layer & overlay range & all id \\
+  color & black & warna bentuk node \\
+  fontcolor & black & warna huruf \\
+  fontname & times-roman & jenis font \\
+  fontsize & 14 & ukuran dari font \\
+  height, width & .5,.75 & tinggi dan panjang dalam bentuk inchi \\
+  label & node name & kalimat \\
+  layer & overlay range & semua id \\
   shape & ellipse & ellipse, box, circle, doublecircle, plaintext, polygon \\
   shapefile & & external EPSF file if epsf shape \\
   style & & graphics options (bold, dotteed, filled)\\
@@ -262,6 +265,8 @@ Tabel untuk atribut menggambar sebagai berikut
 \end{center}
 \end{table}
 
+\item \textit{Edge Attributes}, Pada Tabel di bawah ini menunjukkan apa saja isi dari \textit{Edge Attributes}
+
 \begin{table}[htbp]
 \begin{center}
 \caption{\textit{Edge Attributes}}
@@ -269,25 +274,26 @@ Tabel untuk atribut menggambar sebagai berikut
 \hline
   Nama & Defaulf & Value \\
 \hline
-  color & black & edge strokes color \\
-  decorate & & draws a line connecting labels \\
+  color & black & warna garis \\
+  decorate & & gambar yang menghubungkan label \\
   dir & forward & forward, back, both, or none \\
-  fontcolor & black & type face color \\
-  fontname & times-roman & PostScript font family \\
-  fontsize & 14 & point size of label \\
+  fontcolor & black & warna forn \\
+  fontname & times-roman & jenis font \\
+  fontsize & 14 & ukuran fonr \\
   id & & optional value \\
   label & & label, if not empty \\
   layer & overlay range & all id \\
   minlen & 1 & minimum rank distance between head and tail \\
   style & & graphics options (bold, dotteed, filled) \\
   weight & 1 & integer reflecting inmportance of edge \\
-  
 \hline
 \end{tabular}
 \end{center}
 \end{table}
 
-  \begin{table}[htbp]
+\item \textit{Graph Attributes}, Pada Tabel di bawah ini menunjukkan apa saja isi dari \textit{Graph Attributes}
+
+\begin{table}[htbp]
 \begin{center}
 \caption{\textit{Graph Attributes}}
 \begin{tabular}{|c|c|l|}
@@ -317,14 +323,13 @@ Tabel untuk atribut menggambar sebagai berikut
 \end{center}
 \end{table}
 
-
+\end{enumerate}
 \end{enumerate}
 
 
 
 \section{Visualisasi Graf dengan Viz.js}
 \label{sec: Visualisasi Graf dengan Viz.js}
-Data terbuka adalah data yang terbuka. Tetapi jika dilihat lagi data terbuka yang dimaksud dalam konteks saat ini adalah data yang bebas diakses, data yang bebas digunakan kembali, dan data dalam format \textit{machine-readable}. Data yang bebas diakses dan bebas digunakan kembali sudah cukup jelas. Semua orang boleh dan diizinkan untuk mengakses dan menggunakan data tersebut untuk keperluannya masing-masing. Pada dasarnya data dalam format PDF, image, atau apapun yang bisa dilihat oleh manusia jika masuk ke dalam kriteria ini. Namun bisa dilihat dan dimengerti saja tidak cukup. Maka dari itu ada kriteria ketiga yaitu "data dalam format \textit{machine-readable}". Format \textit{machine-readable adalah} sebuah format yang memiliki struktur jelas, di mana satu data berada pada satu baris, dan dalam format terbuka (contohnya format CSV atau JSON). Tujuannya satu, agar data yang ada bisa dimengerti oleh mesin. Dalam hal ini komputer. Jika data dapat dimengerti oleh komputer, maka pengolahan data akan lebih baik, lebih cepat, lebih efisien dan lebih akurat.
 
 JSON sebagai salah satu format terbuka digunakan untuk membuat graf. Graf ini dihasilkan dengan menggunakan \textit{viz.js} yang merupakan mesin pembaca \textit{DOT}. \textit{DOT} sendiri dibuat dengan melihat struktur JSON. Agar graf dapat ditampilkan pada suatu \textit{web browser}, salah satu caranya adalah dengan menggunakan \textit{viz.js}. Visualisasi ini dapat dilakukan dengan menggunakan javascript dan HTML5 untuk membuat sebuah graf pada halaman \textit{web}. Hal pertama yang perlu dilakukan adalah dengan melakukan
 \textit{install viz.js} di \url{https://github.com/mdaines/viz.js/releases}.\footnote{"viz", \url{https://github.com/mdaines/viz.js/releases}} Lalu data tersebut
