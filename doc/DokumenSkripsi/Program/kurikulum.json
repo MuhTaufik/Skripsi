@@ -1,0 +1,1808 @@
+[
+  {
+    "kode": "AIF181101",
+    "nama": "Computational Thinking",
+    "prasyarat": {
+      "tempuh": [],
+      "lulus": [],
+      "bersamaan": [],
+      "berlakuAngkatan" : []
+    },
+    "sks": 3,
+    "wajib": true,
+    "semester": 1
+  },
+  {
+    "kode": "AIF181103",
+    "nama": "Matematika Dasar",
+    "prasyarat": {
+      "tempuh": [],
+      "lulus": [],
+      "bersamaan": [],
+      "berlakuAngkatan" : []
+    },
+    "sks": 4,
+    "wajib": true,
+    "semester": 1
+  },
+  {
+    "kode": "AIF181105",
+    "nama": "Pengantar Informatika",
+    "prasyarat": {
+      "tempuh": [],
+      "lulus": [],
+      "bersamaan": [],
+      "berlakuAngkatan" : []
+    },
+    "sks": 2,
+    "wajib": true,
+    "semester": 1
+  },
+  {
+    "kode": "AIF181107",
+    "nama": "Matematika Diskret",
+    "prasyarat": {
+      "tempuh": [],
+      "lulus": [],
+      "bersamaan": [],
+      "berlakuAngkatan" : []
+    },
+    "sks": 3,
+    "wajib": true,
+    "semester": 1
+  },
+  {
+    "kode": "MKU170130",
+    "nama": "Bahasa Indonesia",
+    "prasyarat": {
+      "tempuh": [],
+      "lulus": [],
+      "bersamaan": [],
+      "berlakuAngkatan" : []
+    },
+    "sks": 2,
+    "wajib": true,
+    "semester": 1
+  },
+  {
+    "kode": "MKU170110",
+    "nama": "Pendidikan Kewarganegaraan",
+    "prasyarat": {
+      "tempuh": [],
+      "lulus": [],
+      "bersamaan": [],
+      "berlakuAngkatan" : []
+    },
+    "sks": 2,
+    "wajib": true,
+    "semester": 1
+  },
+  {
+    "kode": "MKU170120",
+    "nama": "Logika",
+    "prasyarat": {
+      "tempuh": [],
+      "lulus": [],
+      "bersamaan": [],
+      "berlakuAngkatan" : []
+    },
+    "sks": 2,
+    "wajib": true,
+    "semester": 1
+  },
+  {
+    "kode": "AIF181100",
+    "nama": "Dasar Pemrograman",
+    "prasyarat": {
+      "tempuh": [],
+      "lulus": [
+        "AIF181101"
+      ],
+      "bersamaan": [],
+      "berlakuAngkatan" : [
+        "2018"
+      ]
+    },
+    "sks": 4,
+    "wajib": true,
+    "semester": 2
+  },
+  {
+    "kode": "AIF181202",
+    "nama": "Arsitektur dan Organisasi Komputer",
+    "prasyarat": {
+      "tempuh": [],
+      "lulus": [],
+      "bersamaan": [],
+      "berlakuAngkatan" : []
+    },
+    "sks": 4,
+    "wajib": true,
+    "semester": 2
+  },
+  {
+    "kode": "AIF181104",
+    "nama": "Logika Informatika",
+    "prasyarat": {  
+      "tempuh": [],
+      "lulus": [],
+      "bersamaan": [],
+      "berlakuAngkatan" : []
+    },
+    "sks": 3,
+    "wajib": true,
+    "semester": 2
+  },
+  {
+    "kode": "AIF181106",
+    "nama": "Matriks dan Ruang Vektor",
+    "prasyarat": {
+      "tempuh": [],
+      "lulus": [],
+      "bersamaan": [],
+      "berlakuAngkatan" : []
+    },
+    "sks": 3,
+    "wajib": true,
+    "semester": 2
+  },
+  {
+    "kode": "MKU180240",
+    "nama": "Etika",
+    "prasyarat": {
+      "tempuh": [],
+      "lulus": [],
+      "bersamaan": [],
+      "berlakuAngkatan" : []
+    },
+    "sks": 2,
+    "wajib": true,
+    "semester": 2
+  },
+  {
+    "kode": "MKU180360",
+    "nama": "Estetika",
+    "prasyarat": {
+      "tempuh": [],
+      "lulus": [],
+      "bersamaan": [],
+      "berlakuAngkatan" : []
+    },
+    "sks": 2,
+    "wajib": true,
+    "semester": 2
+  },
+  {
+    "kode": "AIF182101",
+    "nama": "Algoritma Struktur Data",
+    "prasyarat": {
+      "tempuh": [],
+      "lulus": [
+        "AIF181100"
+      ],
+      "bersamaan": [],
+      "berlakuAngkatan" : []
+    },
+    "sks": 3,
+    "wajib": true,
+    "semester": 3
+  },
+  {
+    "kode": "AIF182103",
+    "nama": "Struktur Diskret",
+    "prasyarat": {
+      "tempuh": [
+        "AIF181107"
+      ],
+      "lulus": [],
+      "bersamaan": [],
+      "berlakuAngkatan" : []
+    },
+    "sks": 4,
+    "wajib": true,
+    "semester": 3
+  },
+  {
+    "kode": "AIF182105",
+    "nama": "Pemrograman Berorientasi Objek",
+    "prasyarat": {
+      "tempuh": [],
+      "lulus": [
+        "AIF181100"
+      ],
+      "bersamaan": [],
+      "berlakuAngkatan" : []
+    },
+    "sks": 2,
+    "wajib": true,
+    "semester": 3
+  },
+  {
+    "kode": "AIF182007",
+    "nama": "Teknik Presentasi",
+    "prasyarat": {
+      "tempuh": [],
+      "lulus": [],
+      "bersamaan": []
+    },
+    "sks": 2,
+    "wajib": true,
+    "semester": 3
+  },
+  {
+    "kode": "AIF182109",
+    "nama": "Statistika untuk Komputasi",
+    "prasyarat": {
+      "tempuh": [],
+      "lulus": [],
+      "bersamaan": []
+    },
+    "sks": 3,
+    "wajib": true,
+    "semester": 3
+  },
+  {
+    "kode": "MKU180370",
+    "nama": "Agama Katolik",
+    "prasyarat": {
+      "tempuh": [],
+      "lulus": [],
+      "bersamaan": [],
+      "berlakuAngkatan" : []
+    },
+    "sks": 2,
+    "wajib": true,
+    "semester": 3
+  },{
+    "kode": "MKU180380",
+    "nama": "Fenomena Katolik",
+    "prasyarat": {
+      "tempuh": [],
+      "lulus": [],
+      "bersamaan": [],
+      "berlakuAngkatan" : []
+    },
+    "sks": 2,
+    "wajib": true,
+    "semester": 3
+  },
+  {
+    "kode": "MKU180250",
+    "nama": "Pancasila",
+    "prasyarat": {
+      "tempuh": [],
+      "lulus": [],
+      "bersamaan": [],
+      "berlakuAngkatan" : []
+    },
+    "sks": 2,
+    "wajib": true,
+    "semester": 3
+  },
+  {
+    "kode": "AIF182100",
+    "nama": "Analisis dan Desain Perangkat Lunak",
+    "prasyarat": {
+      "tempuh": [],
+      "lulus": [
+        "AIF182105"
+      ],
+      "bersamaan": [],
+      "berlakuAngkatan" : []
+    },
+    "sks": 4,
+    "wajib": true,
+    "semester": 4
+  },
+  {
+    "kode": "AIF182302",
+    "nama": "Manajemen Informasi dan Basis Data",
+    "prasyarat": {
+      "tempuh": [
+        "AIF182101"
+      ],
+      "lulus": [],
+      "bersamaan": [],
+      "berlakuAngkatan" : []
+    },
+    "sks": 4,
+    "wajib": true,
+    "semester": 4
+  },
+  {
+    "kode": "AIF182204",
+    "nama": "Pemrograman Berbasis Web",
+    "prasyarat": {
+      "tempuh": [
+        "AIF182302"
+      ],
+      "lulus": [],
+      "bersamaan": [
+        "AIF182302"
+      ],
+      "berlakuAngkatan" : []
+    },
+    "sks": 3,
+    "wajib": true,
+    "semester": 4
+  },
+  {
+    "kode": "AIF182106",
+    "nama": "Desain dan Analisis Algoritma",
+    "prasyarat": {
+      "tempuh": [
+       "AIF182103"
+      ],
+      "lulus": [
+        "AIF182101"
+      ],
+      "bersamaan": [],
+      "berlakuAngkatan" : []
+    },
+    "sks": 3,
+    "wajib": true,
+    "semester": 4
+  },
+  {
+    "kode": "AIF182308",
+    "nama": "Pengantar Sistem Informasi",
+    "prasyarat": {
+      "tempuh": [
+        "AIF182302"
+      ],
+      "lulus": [
+        "AIF181105"
+      ],
+      "bersamaan": [
+        "AIF182302"
+      ],
+      "berlakuAngkatan" : []
+    },
+    "sks": 3,
+    "wajib": true,
+    "semester": 4
+  },
+  {
+    "kode": "AIF182210",
+    "nama": "Pengantar Jaringan Komputer",
+    "prasyarat": {
+      "tempuh": [],
+      "lulus": [],
+      "bersamaan": [],
+      "berlakuAngkatan" : []
+    },
+    "sks": 2,
+    "wajib": true,
+    "semester": 4
+  },
+  {
+    "kode": "AIF183201",
+    "nama": "Sistem Operasi",
+    "prasyarat": {
+      "tempuh": [
+        "AIF182101"
+      ],
+      "lulus": [],
+      "bersamaan": [],
+      "berlakuAngkatan" : []
+    },
+    "sks": 3,
+    "wajib": true,
+    "semester": 5
+  },
+  {
+    "kode": "AIF183303",
+    "nama": "Rekayasa Perangkat Lunak",
+    "prasyarat": {
+      "tempuh": [
+        "AIF182100"
+      ],
+      "lulus": [],
+      "bersamaan": [],
+      "berlakuAngkatan" : []
+    },
+    "sks": 3,
+    "wajib": true,
+    "semester": 5
+  },
+  {
+    "kode": "AIF183305",
+    "nama": "Manajemen Proyek",
+    "prasyarat": {
+      "tempuh": [
+        "AIF183303"
+      ],
+      "lulus": [],
+      "bersamaan": [
+        "AIF183303"
+      ],
+      "berlakuAngkatan" : []
+    },
+    "sks": 2,
+    "wajib": true,
+    "semester": 5
+  },
+  {
+    "kode": "AIF183107",
+    "nama": "Pengantar Sistem Cerdas",
+    "prasyarat": {
+      "tempuh": [
+        "AIF182106",
+        "AIF181104"
+      ],
+      "lulus": [],
+      "bersamaan": [],
+      "berlakuAngkatan" : []
+    },
+    "sks": 3,
+    "wajib": true,
+    "semester": 5
+  },
+  {
+    "kode": "AIF183209",
+    "nama": "Pemrograman pada Perangkat Bergerak",
+    "prasyarat": {
+      "tempuh": [
+        "AIF182100",
+        "AIF182210"
+      ],
+      "lulus": [],
+      "bersamaan": [],
+      "berlakuAngkatan" : []
+    },
+    "sks": 3,
+    "wajib": true,
+    "semester": 5
+  },
+  {
+    "kode": "AIF183111",
+    "nama": "Interaksi Manusia Komputer",
+    "prasyarat": {
+      "tempuh": [],
+      "lulus": [],
+      "bersamaan": [],
+      "berlakuAngkatan" : []
+    },
+    "sks": 3,
+    "wajib": true,
+    "semester": 5
+  },
+  {
+    "kode": "AIF183300",
+    "nama": "Teknologi Basis Data",
+    "prasyarat": {
+      "tempuh": [],
+      "lulus": [
+        "AIF182302"
+      ],
+      "bersamaan": [],
+      "berlakuAngkatan" : []
+    },
+    "sks": 2,
+    "wajib": true,
+    "semester": 6
+  },
+  {
+    "kode": "AIF183002",
+    "nama": "Penulisan Ilmiah",
+    "prasyarat": {
+      "tempuh": [],
+      "lulus": [],
+      "bersamaan": [],
+      "berlakuAngkatan" : []
+    },
+    "sks": 2,
+    "wajib": true,
+    "semester": 6
+  },
+  {
+    "kode": "AIF183204",
+    "nama": "Jaringan Komputer",
+    "prasyarat": {
+      "tempuh": [
+        "AIF182210"
+      ],
+      "lulus": [],
+      "bersamaan": [],
+      "berlakuAngkatan" : []
+    },
+    "sks": 2,
+    "wajib": true,
+    "semester": 6
+  },
+  {
+    "kode": "AIF183106",
+    "nama": "Proyek Informatika",
+    "prasyarat": {
+      "tempuh": [
+        "AIF183303",
+        "AIF183305"
+      ],
+      "lulus": [],
+      "bersamaan": []
+    },
+    "sks": 6,
+    "wajib": true,
+    "semester": 6
+  },
+  {
+    "kode": "AIF183308",
+    "nama": "Proyek Sistem Informasi 1",
+    "prasyarat": {
+      "tempuh": [
+        "AIF183305"
+      ],
+      "lulus": [
+        "AIF182308"
+      ],
+      "bersamaan": []
+    },
+    "sks": 3,
+    "wajib": true,
+    "semester": 6
+  },
+  {
+    "kode": "AIF184001",
+    "nama": "Skripsi 1",
+    "prasyarat": {
+      "tempuh": [],
+      "lulus": [
+        "AIF183002",
+        "AIF182007"
+      ],
+      "bersamaan": [],
+      "berlakuAngkatan" : ["2017"]
+    },
+    "sks": 3,
+    "wajib": true,
+    "semester": 7
+  },
+  {
+    "kode": "AIF184303",
+    "nama": "Proyek Sistem Informasi 2",
+    "prasyarat": {
+      "tempuh": [],
+      "lulus": [
+        "AIF183308"
+      ],
+      "bersamaan": [],
+      "berlakuAngkatan" : []
+    },
+    "sks": 3,
+    "wajib": true,
+    "semester": 7
+  },
+  {
+    "kode": "AIF184005",
+    "nama": "Komputer dan Masyarakat",
+    "prasyarat": {
+      "tempuh": [],
+      "lulus": [],
+      "bersamaan": [],
+      "berlakuAngkatan" : []
+    },
+    "sks": 2,
+    "wajib": true,
+    "semester": 7
+  },
+  {
+    "kode": "AIF184000",
+    "nama": "Etika Profesi",
+    "prasyarat": {
+      "tempuh": [],
+      "lulus": [],
+      "bersamaan": [],
+      "berlakuAngkatan" : []
+    },
+    "sks": 2,
+    "wajib": true,
+    "semester": 8
+  },
+  {
+    "kode": "AIF184002",
+    "nama": "Skripsi 2",
+    "prasyarat": {
+      "tempuh": [],
+      "lulus": [
+        "AIF183002",
+        "AIF184001",
+        "AIF182007"
+      ],
+      "bersamaan": [
+        "AIF184001"
+      ],
+      "berlakuAngkatan" : []
+    },
+    "sks": 5,
+    "wajib": true,
+    "semester": 8
+  },
+  {
+    "kode": "AIF184004",
+    "nama": "Tugas Akhir",
+    "prasyarat": {
+      "tempuh": [],
+      "lulus": [
+        "AIF183002",
+        "AIF182007"
+      ],
+      "bersamaan": [],
+      "berlakuAngkatan" : ["2017"]
+    },
+    "sks": 8,
+    "wajib": true,
+    "semester": 8
+  },
+  {
+    "kode": "AIF183141",
+    "nama": "Pemrograman Fungsional",
+    "prasyarat": {
+      "tempuh": [
+        "AIF181107"
+      ],
+      "lulus": [],
+      "bersamaan": [],
+      "berlakuAngkatan" : []
+    },
+    "sks": 2,
+    "wajib": false,
+    "semester": 5
+  },
+  {
+    "kode": "AIF183143",
+    "nama": "Pemodelan Formal",
+    "prasyarat": {
+      "tempuh": [],
+      "lulus": [
+        "AIF181104"
+      ],
+      "bersamaan": [],
+      "berlakuAngkatan" : []
+    },
+    "sks": 3,
+    "wajib": false,
+    "semester": 5
+  },
+  {
+    "kode": "AIF182111",
+    "nama": "Pemrograman Kompetitif 1",
+    "prasyarat": {
+      "tempuh": [],
+      "lulus": [
+        "AIF182101"
+      ],
+      "bersamaan": [],
+      "berlakuAngkatan" : []
+    },
+    "sks": 3,
+    "wajib": false,
+    "semester": 3
+  },
+  {
+    "kode": "AIF183147",
+    "nama": "Sertifikasi Dasar-dasar Java",
+    "prasyarat": {
+      "tempuh": [
+        "AIF182105"
+      ],
+      "lulus": [],
+      "bersamaan": [],
+      "berlakuAngkatan" : []
+    },
+    "sks": 2,
+    "wajib": false,
+    "semester": 5
+  },
+  {
+    "kode": "AIF183149",
+    "nama": "Teori Bilangan",
+    "prasyarat": {
+      "tempuh": [
+        "AIF181107"
+      ],
+      "lulus": [],
+      "bersamaan": [],
+      "berlakuAngkatan" : []
+    },
+    "sks": 3,
+    "wajib": false,
+    "semester": 5
+  },
+  {
+    "kode": "AIF183151",
+    "nama": "Teori Bahasa dan Kompilasi",
+    "prasyarat": {
+      "tempuh": [],
+      "lulus": [
+        "AIF181104",
+        "AIF182103"
+      ],
+      "bersamaan": [],
+      "berlakuAngkatan" : []
+    },
+    "sks": 2,
+    "wajib": false,
+    "semester": 5
+  },
+  {
+    "kode": "AIF183153",
+    "nama": "Matematika Kombinatorial",
+    "prasyarat": {
+      "tempuh": [],
+      "lulus": [
+        "AIF181107"
+      ],
+      "bersamaan": [],
+      "berlakuAngkatan" : []
+    },
+    "sks": 3,
+    "wajib": false,
+    "semester": 5
+  },
+  {
+    "kode": "AIF183155",
+    "nama": "Metode Numerik",
+    "prasyarat": {
+      "tempuh": [],
+      "lulus": [
+       "AIF181103",
+       "AIF181100"
+     ],
+      "bersamaan": [],
+      "berlakuAngkatan" : []
+    },
+    "sks": 3,
+    "wajib": false,
+    "semester": 5
+  },
+  {
+    "kode": "AIF183157",
+    "nama": "Pemrograman Lojik",
+    "prasyarat": {
+      "tempuh": [],
+      "lulus": [
+        "AIF181104"
+      ],
+      "bersamaan": [],
+      "berlakuAngkatan" : []
+    },
+    "sks": 2,
+    "wajib": false,
+    "semester": 5
+  },
+  {
+    "kode": "AIF183013",
+    "nama": "Kerja Praktek 1",
+    "prasyarat": {
+      "tempuh": [],
+      "lulus": [],
+      "bersamaan": [],
+      "berlakuAngkatan" : []
+    },
+    "sks": 2,
+    "wajib": false,
+    "semester": 5
+  },
+  {
+    "kode": "AIF183015",
+    "nama": "Pendidikan Pengabdian kepada Masyarakat",
+    "prasyarat": {
+      "tempuh": [],
+      "lulus": [],
+      "bersamaan": [],
+      "berlakuAngkatan" : []
+    },
+    "sks": 3,
+    "wajib": false,
+    "semester": 5
+  },
+  {
+    "kode": "AIF183117",
+    "nama": "Grafika Komputer",
+    "prasyarat": {
+      "tempuh": [
+        "AIF181103"
+      ],
+      "lulus": [
+        "AIF182105"
+      ],
+      "bersamaan": [],
+      "berlakuAngkatan" : []
+    },
+    "sks": 2,
+    "wajib": false,
+    "semester": 5
+  },
+  {
+    "kode": "AIF183119",
+    "nama": "Keamanan Informasi",
+    "prasyarat": {
+      "tempuh": [],
+      "lulus": [
+        "AIF181107"
+      ],
+      "bersamaan": [],
+      "berlakuAngkatan" : []
+    },
+    "sks": 2,
+    "wajib": false,
+    "semester": 5
+  },
+  {
+    "kode": "AIF182112",
+    "nama": "Pemrograman Kompetitif 2",
+    "prasyarat": {
+      "tempuh": [],
+      "lulus": [
+        "AIF182111"
+      ],
+      "bersamaan": [],
+      "berlakuAngkatan" : []
+    },
+    "sks": 3,
+    "wajib": false,
+    "semester": 4
+  },
+  {
+    "kode": "AIF183123",
+    "nama": "Topik Khusus Informatika 1",
+    "prasyarat": {
+      "tempuh": [],
+      "lulus": [],
+      "bersamaan": [],
+      "berlakuAngkatan" : []
+    },
+    "sks": 2,
+    "wajib": false,
+    "semester": 5
+  },
+  {
+    "kode": "AIF183225",
+    "nama": "Sertifikasi Administrasi Jaringan Komputer 1",
+    "prasyarat": {
+      "tempuh": [],
+      "lulus": [],
+      "bersamaan": [],
+      "berlakuAngkatan" : []
+    },
+    "sks": 3,
+    "wajib": false,
+    "semester": 5
+  },
+  {
+    "kode": "AIF183227",
+    "nama": "Pengantar Teleomunikasi",
+    "prasyarat": {
+      "tempuh": [
+        "AIF182210"
+      ],
+      "lulus": [],
+      "bersamaan": [],
+      "berlakuAngkatan" : []
+    },
+    "sks": 3,
+    "wajib": false,
+    "semester": 5
+  },
+  {
+    "kode": "AIF183229",
+    "nama": "Topik Khusus Sistem Terdistribusi 1",
+    "prasyarat": {
+      "tempuh": [],
+      "lulus": [],
+      "bersamaan": [],
+      "berlakuAngkatan" : []
+    },
+    "sks": 2,
+    "wajib": false,
+    "semester": 5
+  },
+  {
+    "kode": "AIF183331",
+    "nama": "Sistem e-Commerce",
+    "prasyarat": {
+      "tempuh": [],
+      "lulus": [
+        "AIF182308"
+      ],
+      "bersamaan": [],
+      "berlakuAngkatan" : []
+    },
+    "sks": 3,
+    "wajib": false,
+    "semester": 5
+  },
+  {
+    "kode": "AIF183333",
+    "nama": "Metodologi Pengembangan Sistem Informasi 1",
+    "prasyarat": {
+      "tempuh": [],
+      "lulus": [
+        "AIF182308"
+      ],
+      "bersamaan": [],
+      "berlakuAngkatan" : []
+    },
+    "sks": 2,
+    "wajib": false,
+    "semester": 5
+  },
+  {
+    "kode": "AIF183337",
+    "nama": "Topik Khusus Sistem Informasi 1",
+    "prasyarat": {
+      "tempuh": [],
+      "lulus": [],
+      "bersamaan": []
+    },
+    "sks": 2,
+    "wajib": false,
+    "semester": 5
+  },
+  {
+    "kode": "AIF183339",
+    "nama": "Sertifikasi Perancangan dan Pemrograman Basis Data dengan Oracle",
+    "prasyarat": {
+      "tempuh": [
+        "AIF182302"
+      ],
+      "lulus": [],
+      "bersamaan": [],
+      "berlakuAngkatan" : []
+    },
+    "sks": 2,
+    "wajib": false,
+    "semester": 5
+  },
+  {
+    "kode": "AIF183010",
+    "nama": "Kerja Praktek 2",
+    "prasyarat": {
+      "tempuh": [],
+      "lulus": [],
+      "bersamaan": [],
+      "berlakuAngkatan" : []
+    },    
+    "sks": 3,
+    "wajib": false,
+    "semester": 6
+  },
+  {
+    "kode": "AIF183112",
+    "nama": "Pengujian Perangkat Lunak",
+    "prasyarat": {
+      "tempuh": [],
+      "lulus": [
+        "AIF183303"
+      ],
+      "bersamaan": [],
+      "berlakuAngkatan" : []
+    },
+    "sks": 2,
+    "wajib": false,
+    "semester": 6
+  },
+  {
+    "kode": "AIF183114",
+    "nama": "Algoritma Kriptografi",
+    "prasyarat": {
+      "tempuh": [
+        "AIF183119"
+      ],
+      "lulus": [],
+      "bersamaan": [],
+      "berlakuAngkatan" : []
+    },
+    "sks": 3,
+    "wajib": false,
+    "semester": 6
+  },
+  {
+    "kode": "AIF183116",
+    "nama": "Komputasi Pararel",
+    "prasyarat": {
+      "tempuh": [],
+      "lulus": [
+        "AIF182101"
+      ],
+      "bersamaan": [],
+      "berlakuAngkatan" : []
+    },
+    "sks": 2,
+    "wajib": false,
+    "semester": 6
+  },
+  {
+    "kode": "AIF183118",
+    "nama": "Komputasi Geometri",
+    "prasyarat": {
+      "tempuh": [],
+      "lulus": [
+        "AIF182210"
+      ],
+      "bersamaan": [],
+      "berlakuAngkatan" : []
+    },
+    "sks": 3,
+    "wajib": false,
+    "semester": 6
+  },
+  {
+    "kode": "AIF183120",
+    "nama": "Pemrograman Permainan Komputer",
+    "prasyarat": {
+      "tempuh": [
+        "AIF182101"
+      ],
+      "lulus": [],
+      "bersamaan": [],
+      "berlakuAngkatan" : []
+    },    
+    "sks": 2,
+    "wajib": false,
+    "semester": 6
+  },
+  {
+    "kode": "AIF183122",
+    "nama": "Pemodelan Simulasi",
+    "prasyarat": {
+      "tempuh": [
+        "AIF182101"
+      ],
+      "lulus": [],
+      "bersamaan": [],
+      "berlakuAngkatan" : []
+    },
+    "sks": 3,
+    "wajib": false,
+    "semester": 6
+  },
+  {
+    "kode": "AIF183124",
+    "nama": "Grafika Komputer Lanjut",
+    "prasyarat": {
+      "tempuh": [],
+      "lulus": [
+        "AIF183117"
+      ],
+      "bersamaan": [],
+      "berlakuAngkatan" : []
+    },
+    "sks": 3,
+    "wajib": false,
+    "semester": 6
+  },
+  {
+    "kode": "AIF183121",
+    "nama": "Pemrograman Kompetitif 3",
+    "prasyarat": {
+      "tempuh": [],
+      "lulus": [
+        "AIF182112"
+      ],
+      "bersamaan": [],
+      "berlakuAngkatan" : []
+    },
+    "sks": 3,
+    "wajib": false,
+    "semester": 5
+  },
+  {
+    "kode": "AIF183128",
+    "nama": "Topik Khusus Informatika 2",
+    "prasyarat": {
+      "tempuh": [],
+      "lulus": [],
+      "bersamaan": [],
+      "berlakuAngkatan" : []
+    },
+    "sks": 3,
+    "wajib": false,
+    "semester": 6
+  },
+  {
+    "kode": "AIF183232",
+    "nama": "Pemrograman Berbasis Web Lanjut",
+    "prasyarat": {
+      "tempuh": [],
+      "lulus": [
+        "AIF182204",
+        "AIF182302"
+      ],
+      "bersamaan": [],
+      "berlakuAngkatan" : []
+    },
+    "sks": 3,
+    "wajib": false,
+    "semester": 6
+  },
+  {
+    "kode": "AIF183250",
+    "nama": "Sistem Aplikasi Telematika",
+    "prasyarat": {
+      "tempuh": [],
+      "lulus": [
+        "AIF182210"
+      ],
+      "bersamaan": [],
+      "berlakuAngkatan" : []
+    },
+    "sks": 3,
+    "wajib": false,
+    "semester": 6
+  },
+  {
+    "kode": "AIF183236",
+    "nama": "Sertifikasi Administrasai Jaringan Komputer 2",
+    "prasyarat": {
+      "tempuh": [],
+      "lulus": [
+        "AIF183225"
+      ],
+      "bersamaan": [],
+      "berlakuAngkatan" : []
+    },
+    "sks": 3,
+    "wajib": false,
+    "semester": 6
+  },
+  {
+    "kode": "AIF183238",
+    "nama": "Topik Khusus Sistem Terdistribusi 2",
+    "prasyarat": {
+      "tempuh": [],
+      "lulus": [],
+      "bersamaan": [],
+      "berlakuAngkatan" : []
+    },
+    "sks": 3,
+    "wajib": false,
+    "semester": 6
+  },
+  {
+    "kode": "AIF183340",
+    "nama": "Metodologi Pengembangan Sistem Informasi 2",
+    "prasyarat": {
+      "tempuh": [],
+      "lulus": [
+        "AIF183333"
+      ],
+     "bersamaan": [],
+     "berlakuAngkatan" : []
+    },
+    "sks": 2,
+    "wajib": false,
+    "semester": 6
+  },
+  {
+    "kode": "AIF1833442",
+    "nama": "Kewirausahaan Berbasis Teknologi",
+    "prasyarat": {
+      "tempuh": [],
+      "lulus": [],
+      "bersamaan": [],
+      "berlakuAngkatan" : []
+    },
+    "sks": 3,
+    "wajib": false,
+    "semester": 6
+  },
+  {
+    "kode": "AIF183446",
+    "nama": "Topik Khusus Sistem Informasi 2",
+    "prasyarat": {
+      "tempuh": [],
+      "lulus": [],
+      "bersamaan": [],
+      "berlakuAngkatan" : []
+    },
+    "sks": 3,
+    "wajib": false,
+    "semester": 6
+  },
+  {
+    "kode": "AIF183348",
+    "nama": "Sistem Kecerdasan Bisnis",
+    "prasyarat": {
+      "tempuh": [
+        "AIF182302"
+      ],
+      "lulus": [],
+      "bersamaan": [],
+      "berlakuAngkatan" : []
+    },
+    "sks": 3,
+    "wajib": false,
+    "semester": 6
+  },
+  {
+    "kode": "AIF184007",
+    "nama": "Kerja Praktek 3",
+    "prasyarat": {
+      "tempuh": [],
+      "lulus": [],
+      "bersamaan": [],
+      "berlakuAngkatan" : []
+    },
+    "sks": 4,
+    "wajib": false,
+    "semester": 7
+  },
+  {
+    "kode": "AIF184109",
+    "nama": "Pembelajaran Mesin",
+    "prasyarat": {
+      "tempuh": [],
+      "lulus": [
+        "AIF183107"
+      ],
+      "bersamaan": [],
+      "berlakuAngkatan" : []
+    },
+    "sks": 3,
+    "wajib": false,
+    "semester": 7
+  },
+  {
+    "kode": "AIF184115",
+    "nama": "Pencarian Temu Kembali Informasi",
+    "prasyarat": {
+      "tempuh": [
+        "AIF181103"
+      ],
+      "lulus": [],
+      "bersamaan": [],
+      "berlakuAngkatan" : []
+    },
+    "sks": 2,
+    "wajib": false,
+    "semester": 7
+  },
+  {
+    "kode": "AIF184119",
+    "nama": "Perancangan Permainan Komputer",
+    "prasyarat": {
+      "tempuh": [],
+      "lulus": [
+        "AIF182100",
+        "AIF183120"
+      ],
+      "bersamaan": [],
+      "berlakuAngkatan" : []
+    },
+    "sks": 2,
+    "wajib": false,
+    "semester": 7
+  },
+  {
+    "kode": "AIF184121",
+    "nama": "Metodi Optimisasi",
+    "prasyarat": {
+      "tempuh": [
+        "AIF183107"
+      ],
+      "lulus": [],
+      "bersamaan": [],
+      "berlakuAngkatan" : []
+    },
+    "sks": 3,
+    "wajib": false,
+    "semester": 7
+  },
+  {
+    "kode": "AIF184123",
+    "nama": "Teknologi Mesin Pencari",
+    "prasyarat": {
+      "tempuh": [
+        "AIF181106"
+      ],
+      "lulus": [],
+      "bersamaan": [],
+      "berlakuAngkatan" : []
+    },
+    "sks": 3,
+    "wajib": false,
+    "semester": 7
+  },
+  {
+    "kode": "AIF184125",
+    "nama": "Pengolahan Bahasa Alami",
+    "prasyarat": {
+      "tempuh": [],
+      "lulus": [
+        "AIF183107"
+      ],
+      "bersamaan": [],
+      "berlakuAngkatan" : []
+    },
+    "sks": 3,
+    "wajib": false,
+    "semester": 7
+  },
+  {
+    "kode": "AIF184127",
+    "nama": "Topik Khusus Informatika 3",
+    "prasyarat": {
+      "tempuh": [],
+      "lulus": [],
+      "bersamaan": [],
+      "berlakuAngkatan" : []
+    },
+    "sks": 3,
+    "wajib": false,
+    "semester": 7
+  },
+  {
+    "kode": "AIF184129",
+    "nama": "Sertifikasi Administrasi Jaringan Komputer 3",
+    "prasyarat": {
+      "tempuh": [],
+      "lulus": [
+        "AIF183236"
+      ],
+      "bersamaan": [],
+      "berlakuAngkatan" : []
+    },
+    "sks": 3,
+    "wajib": false,
+    "semester": 7
+  },
+  {
+    "kode": "AIF184231",
+    "nama": "Jaringan Nirkabel",
+    "prasyarat": {
+      "tempuh": [],
+      "lulus": [
+        "AIF183204"
+      ],
+      "bersamaan": [],
+      "berlakuAngkatan" : []
+    },
+    "sks": 3,
+    "wajib": false,
+    "semester": 7
+  },
+  {
+    "kode": "AIF184233",
+    "nama": "Teknologi Middleware",
+    "prasyarat": {
+      "tempuh": [],
+      "lulus": [
+        "AIF183204"
+      ],
+      "bersamaan": [],
+      "berlakuAngkatan" : []
+    },
+    "sks": 3,
+    "wajib": false,
+    "semester": 7
+  },
+  {
+    "kode": "AIF184235",
+    "nama": "Layanan Berbasis Web",
+    "prasyarat": {
+      "tempuh": [],
+      "lulus": [
+        "AIF182204",
+        "AIF182302",
+        "AIF183204"
+      ],
+      "bersamaan": [],
+      "berlakuAngkatan" : []
+    },
+    "sks": 3,
+    "wajib": false,
+    "semester": 7
+  },
+  {
+    "kode": "AIF184237",
+    "nama": "Topik Khusus Sistem Terdistribusi 3",
+    "prasyarat": {
+      "tempuh": [],
+      "lulus": [],
+      "bersamaan": [],
+      "berlakuAngkatan" : []
+    },
+    "sks": 3,
+    "wajib": false,
+    "semester": 7
+  },
+  {
+    "kode": "AIF184339",
+    "nama": "Pengendalian dan Audit Teknologi Informasi",
+    "prasyarat": {
+      "tempuh": [
+        "AIF182308"
+      ],
+      "lulus": [],
+      "bersamaan": [],
+      "berlakuAngkatan" : []
+    },
+    "sks": 3,
+    "wajib": false,
+    "semester": 7
+  },
+  {
+    "kode": "AIF184341",
+    "nama": "Penambangan Data",
+    "prasyarat": {
+      "tempuh": [],
+      "lulus": [
+        "AIF182101"
+      ],
+      "bersamaan": [],
+      "berlakuAngkatan" : []
+    },
+    "sks": 3,
+    "wajib": false,
+    "semester": 7
+  },
+  {
+    "kode": "AIF184343",
+    "nama": "Topik Khusus Sistem Informasi 3",
+    "prasyarat": {
+      "tempuh": [],
+      "lulus": [],
+      "bersamaan": [],
+      "berlakuAngkatan" : []
+    },
+    "sks": 3,
+    "wajib": false,
+    "semester": 7
+  },
+  {
+    "kode": "AIF184345",
+    "nama": "Teknologi Big Data dan Cloud Computing",
+    "prasyarat": {
+      "tempuh": [],
+      "lulus": [
+        "AIF183300",
+        "AIF183204"
+      ],
+      "bersamaan": [],
+      "berlakuAngkatan" : []
+    },
+    "sks": 3,
+    "wajib": false,
+    "semester": 7
+  },
+  {
+    "kode": "AIF184347",
+    "nama": "Jaringan Komputer Lanjut",
+    "prasyarat": {
+      "tempuh": [],
+      "lulus": [
+        "AIF183204"
+      ],
+      "bersamaan": [],
+      "berlakuAngkatan" : []
+    },
+    "sks": 3,
+    "wajib": false,
+    "semester": 7
+  },
+  {
+    "kode": "AIF184006",
+    "nama": "Kerja Praktek 4",
+    "prasyarat": {
+      "tempuh": [],
+      "lulus": [],
+      "bersamaan": [],
+      "berlakuAngkatan" : []
+    },
+    "sks": 5,
+    "wajib": false,
+    "semester": 8
+  },
+  {
+    "kode": "AIF184104",
+    "nama": "Bio-Inspired Computing",
+    "prasyarat": {
+      "tempuh": [],
+      "lulus": [
+        "AIF182106"
+      ],
+      "bersamaan": [],
+      "berlakuAngkatan" : []
+    },
+    "sks": 3,
+    "wajib": false,
+    "semester": 8
+  },
+  {
+    "kode": "AIF184106",
+    "nama": "Analisis Data Permainan Komputer",
+    "prasyarat": {
+      "tempuh": [],
+      "lulus": [
+        "AIF184119"
+      ],
+      "bersamaan": [],
+      "berlakuAngkatan" : []
+    },
+    "sks": 2,
+    "wajib": false,
+    "semester": 8
+  },
+  {
+    "kode": "AIF184108",
+    "nama": "Kompresi Data",
+    "prasyarat": {
+      "tempuh": [],
+      "lulus": [
+        "AIF182106"
+      ],
+      "bersamaan": [],
+      "berlakuAngkatan" : []
+    },
+    "sks": 3,
+    "wajib": false,
+    "semester": 8
+  },
+  {
+    "kode": "AIF184110",
+    "nama": "Pengolahan Citra",
+    "prasyarat": {
+      "tempuh": [],
+      "lulus": [
+        "AIF181106"
+      ],
+      "bersamaan": [],
+      "berlakuAngkatan" : []
+    },
+    "sks": 3,
+    "wajib": false,
+    "semester": 8
+  },
+  {
+    "kode": "AIF184112",
+    "nama": "Pemrosesan Data Geografis",
+    "prasyarat": {
+      "tempuh": [],
+      "lulus": [
+        "AIF182101"
+      ],
+      "bersamaan": [],
+      "berlakuAngkatan" : []
+    },
+    "sks": 3,
+    "wajib": false,
+    "semester": 8
+  },
+  {
+    "kode": "AIF184114",
+    "nama": "Verifikasi Formal",
+    "prasyarat": {
+      "tempuh": [],
+      "lulus": [
+        "AIF182112"
+      ],
+      "bersamaan": [],
+      "berlakuAngkatan" : []
+    },
+    "sks": 3,
+    "wajib": false,
+    "semester": 8
+  },
+  {
+    "kode": "AIF184116",
+    "nama": "Sistem Multi Agen",
+    "prasyarat": {
+      "tempuh": [
+        "AIF183201",
+        "AIF183107"
+      ],
+      "lulus": [],
+      "bersamaan": [],
+      "berlakuAngkatan" : []
+    },
+    "sks": 2,
+    "wajib": false,
+    "semester": 8
+  },
+  {
+    "kode": "AIF184118",
+    "nama": "Pemrograman Sistem",
+    "prasyarat": {
+      "tempuh": [
+        "AIF183201"
+      ],
+      "lulus": [
+        "AIF181100"
+      ],
+      "bersamaan": [],
+      "berlakuAngkatan" : []
+    },
+    "sks": 2,
+    "wajib": false,
+    "semester": 8
+  },
+  {
+    "kode": "AIF184120",
+    "nama": "Topik Khusus Informatika 4",
+    "prasyarat": {
+      "tempuh": [],
+      "lulus": [],
+      "bersamaan": [],
+      "berlakuAngkatan" : []
+    },
+    "sks": 2,
+    "wajib": false,
+    "semester": 8
+  },
+  {
+    "kode": "AIF184222",
+    "nama": "Sertifikasi Administrasi Jaringan Komputer 4",
+    "prasyarat": {
+      "tempuh": [],
+      "lulus": [
+        "AIF184129"
+      ],
+      "bersamaan": [],
+      "berlakuAngkatan" : []
+    },
+    "sks": 3,
+    "wajib": false,
+    "semester": 8
+  },
+  {
+    "kode": "AIF184224",
+    "nama": "Sistem Terdistribusi",
+    "prasyarat": {
+      "tempuh": [],
+      "lulus": [
+        "AIF183204"
+      ],
+      "bersamaan": [],
+      "berlakuAngkatan" : []
+    },
+    "sks": 3,
+    "wajib": false,
+    "semester": 8
+  },
+  {
+    "kode": "AIF184226",
+    "nama": "Teknologi Multimedia",
+    "prasyarat": {
+      "tempuh": [],
+      "lulus": [
+        "AIF183111"
+      ],
+      "bersamaan": [],
+      "berlakuAngkatan" : []
+    },
+    "sks": 3,
+    "wajib": false,
+    "semester": 8
+  },
+  {
+    "kode": "AIF184228",
+    "nama": "Pemrograman Jaringan",
+    "prasyarat": {
+      "tempuh": [],
+      "lulus": [
+        "AIF183204"
+      ],
+      "bersamaan": [],
+      "berlakuAngkatan" : []
+    },
+    "sks": 2,
+    "wajib": false,
+    "semester": 8
+  },
+  {
+    "kode": "AIF184230",
+    "nama": "Keamanan Jaringan",
+    "prasyarat": {
+      "tempuh": [
+        "AIF183119"
+     ],
+      "lulus": [],
+      "bersamaan": [],
+      "berlakuAngkatan" : []
+    },
+    "sks": 3,
+    "wajib": false,
+    "semester": 8
+  },
+  {
+    "kode": "AIF184232",
+    "nama": "Topik Khusus Sistem Terdistribusi 4",
+    "prasyarat": {
+      "tempuh": [],
+      "lulus": [],
+      "bersamaan": [],
+      "berlakuAngkatan" : []
+    },
+    "sks": 2,
+    "wajib": false,
+    "semester": 8
+  },
+  {
+    "kode": "AIF184334",
+    "nama": "Sistem Informasi Skala Besar",
+    "prasyarat": {
+      "tempuh": [],
+      "lulus": [
+        "AIF182308"
+      ],
+      "bersamaan": [],
+      "berlakuAngkatan" : []
+    },
+    "sks": 3,
+    "wajib": false,
+    "semester": 8
+  },
+  {
+    "kode": "AIF184336",
+    "nama": "Sistem e-Government",
+    "prasyarat": {
+      "tempuh": [],
+      "lulus": [],
+      "bersamaan": [],
+      "berlakuAngkatan" : []
+    },
+    "sks": 2,
+    "wajib": false,
+    "semester": 8
+  },
+  {
+    "kode": "AIF184338",
+    "nama": "Manajemen Proses Bisnis",
+    "prasyarat": {
+      "tempuh": [
+        "AIF182105",
+        "AIF182204"
+      ],  
+      "lulus": [],
+      "bersamaan": [],
+      "berlakuAngkatan" : []
+    },
+    "sks": 3,
+    "wajib": false,
+    "semester": 8
+  },
+  {
+    "kode": "AIF184340",
+    "nama": "Sistem Informasi Geografis",
+    "prasyarat": {
+      "tempuh": [],
+      "lulus": [
+        "AIF182308"
+      ],
+      "bersamaan": [],
+      "berlakuAngkatan" : []
+    },
+    "sks": 2,
+    "wajib": false,
+    "semester": 8
+  },
+  {
+    "kode": "AIF184342",
+    "nama": "Topik Khusus Sistem Informasi 4",
+    "prasyarat": {
+      "tempuh": [],
+      "lulus": [],
+      "bersamaan": [],
+      "berlakuAngkatan" : []
+    },
+    "sks": 2,
+    "wajib": false,
+    "semester": 8
+  },
+  {
+    "kode": "AIF184344",
+    "nama": "Analisis Big Data",
+    "prasyarat": {
+      "tempuh": [
+        "AIF184341"
+      ],
+      "lulus": [],
+      "bersamaan": [],
+      "berlakuAngkatan" : []
+    },
+    "sks": 3,
+    "wajib": false,
+    "semester": 8
+  }
+]
