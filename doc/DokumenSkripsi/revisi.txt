@@ -1,18 +1,20 @@
 program
 
-require json ngambil dari url github (progress)
+require json ngambil dari url github (ok)
 json true false ganti jadi boolean (ok)
 pp.svg kirim ke ko pascal (ok)
 nama kosong di perbaiki paling pojok (ok)
 MKU agama dipisah 1 kode 1 matkul (ok)
-parameter (pilihan mau ada atau engga, sama ngeset engine)
-engine bisa ambil dari parameter
+parameter (pilihan mau ada atau engga, sama ngeset engine) (ok)
+engine bisa ambil dari parameter (ok)
 
-4.1 output nya lebih detail
-4.2 algoritma yang digunakan
-4.3 antarmuka dibangkitkan memakai viz.js
+4.1 output nya lebih detail (ok)
+4.2 Perancangan Perangkat Lunak -> jelasin step ngebuat pohon kurikulum(ok)
+4.3 Perancangan antarmuka -> dengan visualisasi viz.js (progress)
 
-5.1 baru implementasi data json di upload di mana dan bisa di akses melalui url apa
-5.3 pengujian eksperimental nyoba engine mengacu dari sub bab visualisasi viz.js, nge cek dari ga ada matkul pilihan sampai ada.
+5.1 implementasi data json -> di upload di mana dan bisa di akses melalui url apa (progress)
+5.3 pengujian eksperimental nyoba engine mengacu dari sub bab visualisasi viz.js (ok)
 
-bab 6 + poster
+bab 6 (ok)
+
+poster (masih progress)
