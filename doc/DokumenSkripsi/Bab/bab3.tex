@@ -22,7 +22,7 @@ Objek di dalam JSON ini menjadi acuan dalam membuat pohon kurikulum. Contoh penu
       "angkatan" : []
     },
     "sks": 3,
-    "wajib": "true",
+    "wajib": true,
     "semester": 1
   }
 ]
@@ -39,9 +39,9 @@ Pada bentuk di atas JSON memiliki beberapa objek sebagai acuan.
 \item \textbf{bersamaan}, berisikan kode mata kuliah yang menunjukan mahasiswa dapat mengambil mata kuliah yang memiliki syarat bersamaan dengan mata kuliah yang sudah tempuh.
 \item \textbf{angkatan}, berisikan tahun angkatan yang merepresentasikan berlaku syarat mata kuliah.
 \end{itemize}
-\item \textbf{sks}, menunjukkan berapa banyak tanggungan belajar mahasiswa.
-\item \textbf{wajib}, menunjukkan mata kuliah tersebut jenisnya wajib atau pilihan. 
-\item \textbf{semester}, menunjukkan mata kuliah tersebut ada di semester berapa.
+\item \textbf{sks}, Menunjukkan berapa banyak tanggungan belajar mahasiswa.
+\item \textbf{wajib}, Jika wajib menunjukan \textit{true} maka mata kuliah tersebut adalah wajib dan jika menunjukan \textit{false} maka mata kuliah tersebut adalah pilihan. 
+\item \textbf{semester}, Menunjukkan semester dan mata kuliah yang ada di semester tersebut.
 \end{enumerate}
 
 
@@ -83,7 +83,7 @@ Mengizinkan orang lain untuk mendistribusikan suatu karya turunan hanya di bawah
 Mengizinkan orang lain menyalin, mendistribusikan, menampilkan, serta membuat karya turunan berdasarkan suatu karya hanya untuk tujuan non-komersial.
 \end{enumerate}
 
-Dari tipe-tipe lisensi di atas, maka lisensi \textit{Creative Commons} yang disarankan untuk digunakan untuk Data Terbuka pada proyek ini adalah lisensi \textit{Creative Commons by Attribution} (CC-BY) dikarenakan lisensi CC-BY inilah yang paling mendekati persyaratan keterbukaan dari Data Terbuka, yaitu: pengguna dapat mendistribusikan data dan menggunakan data secara bebas baik untuk kepentingan komersil, maupun non-komersil tanpa syarat kecuali dengan memberikan atribusi kepada pemilik data. Selain itu, lisensi CC-BY ini bisa dikatakan sebagai lisensi publik paling mudah dipakai untuk memaksimalkan penggunaan atas data tanpa membuat pengguna data khawatir atas status legalitas dari penggunaan data dan akibat dari penggunaan data tersebut.
+Dari tipe-tipe lisensi di atas, maka lisensi \textit{Creative Commons} yang disarankan untuk digunakan untuk Data Terbuka pada proyek ini adalah lisensi \textit{Creative Commons by Attribution} (CC-BY) dikarenakan lisensi CC-BY inilah yang paling mendekati persyaratan keterbukaan dari Data Terbuka, yaitu: pengguna dapat mendistribusikan data dan menggunakan data secara bebas baik untuk kepentingan komersil, maupun non-komersil tanpa syarat kecuali dengan memberikan atribusi kepada pemilik data. Selain itu, lisensi CC-BY ini bisa dikatakan sebagai lisensi publik paling mudah dipakai untuk memaksimalkan penggunaan atas data tanpa membuat pengguna data khawatir atas status legalitas dari penggunaan data dan akibat dari penggunaan data tersebut. Pengarang yang akan diambil hasil karyanya akan mendapatkan pengakuan dari orang banyak karena namanya disebut sebagai referensi dalam pembuatan karya baru.
 
 
 \section{Spesifikasi Perangkat Lunak yang Dibangun}
