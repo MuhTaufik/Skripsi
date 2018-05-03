@@ -30,8 +30,8 @@ Berikut rancangan pembuatan perangkat lunak pohon kurikulum:
 Untuk membuat pohon kurikulum dibutuhkan \textit{library} sebagai bantuan untuk memanggil fungsi yang akan dijalankan. Ada tiga \textit{library} yang digunakan, yaitu \textit{viz.js, http, dan axios}. Masing - masing \textit{library} memiliki fungsi,
 \begin{itemize}
 \item \textit{viz.js}, fungsinya sebagai visualisasi dalam bentuk grafik.
-\item \textit{http}, fungsinya menjalankan server web tanpa menggunakan program server web seperti \textit{Apache}. 
-\item \textit{axios}, \textit{library} untuk http req, karena untuk mengakses data \textit{raw} di \textit{github} perlu \textit{request} data melalui \textit{http}.
+\item \textit{http}, fungsinya menjalankan \textit{server} di \textit{web} tanpa menggunakan program server web seperti \textit{Apache}. 
+\item \textit{axios}, \textit{library} untuk \textit{http request}, karena untuk mengakses data \textit{raw} di \textit{github} perlu \textit{request} data melalui \textit{http}.
 \end{itemize} 
 \item Membuat server, untuk memanggil server yang berjalan di atas \textit{node.js}. Caranya dengan memanggil \textit{createServer()} untuk membuat server HTTP. Di dalam \textit{createServer()} ada method get untuk memanggil \textit{url} yang berasal dari \textit{github}. Lalu di pnggil sebuah fungsi yang di dalamnya akan mengambil data yang berupa node isinya ada \textit{rankSep(), nodesMatkul(), dan edgesMatkul}.
 \item Membuat \textit{rankSep()}, fungsinya untuk memanggil node setiap semester dan kode mata kuliah di setiap semester dan menampilkannya sesuai semester yang ada.
