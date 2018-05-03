@@ -26,14 +26,14 @@ Output dari perangkat lunak adalah pohon kurikulum yang visualisasinya menggunak
 Berikut rancangan pembuatan perangkat lunak pohon kurikulum:
 
 \begin{enumerate}
-\item Pemanggilan \textit{library}\\
+\item Memanggil \textit{library}\\
 Untuk membuat pohon kurikulum dibutuhkan \textit{library} sebagai bantuan untuk memanggil fungsi yang akan dijalankan. Ada tiga \textit{library} yang digunakan, yaitu \textit{viz.js, http, dan axios}. Masing - masing \textit{library} memiliki fungsi,
 \begin{itemize}
 \item \textit{viz.js}, fungsinya sebagai visualisasi dalam bentuk grafik.
 \item \textit{http}, fungsinya menjalankan server web tanpa menggunakan program server web seperti \textit{Apache}. 
 \item \textit{axios}, \textit{library} untuk http req, karena untuk mengakses data \textit{raw} di \textit{github} perlu \textit{request} data melalui \textit{http}.
 \end{itemize} 
-\item Membuat server untuk memanggil server yang berjalan di atas \textit{node.js}. Dengan cara memanggil \textit{createServer()} untuk membuat server HTTP. Di dalam \textit{createServer()} ada method get untuk memanggil \textit{url} yang berasal dari \textit{github}. Lalu di pnggil sebuah fungsi yang di dalamnya akan mengambil data yang berupa node isinya ada \textit{rankSep(), nodesMatkul(), dan edgesMatkul}.
+\item Membuat server, untuk memanggil server yang berjalan di atas \textit{node.js}. Caranya dengan memanggil \textit{createServer()} untuk membuat server HTTP. Di dalam \textit{createServer()} ada method get untuk memanggil \textit{url} yang berasal dari \textit{github}. Lalu di pnggil sebuah fungsi yang di dalamnya akan mengambil data yang berupa node isinya ada \textit{rankSep(), nodesMatkul(), dan edgesMatkul}.
 \item Membuat \textit{rankSep()}, fungsinya untuk memanggil node setiap semester dan kode mata kuliah di setiap semester dan menampilkannya sesuai semester yang ada.
 \item Membuat \textit{nodesMatkul()}, fungsinya memanggil kode mata kuliah, sks dan nama mata kuliah sesuai dengan semester yang ada. 
 \item Membuat \textit{edgesMatkul()}, fungsinya untuk membuat arah setiap pada \textit{node} satu ke \textit{node} lainnya. \textit{Edge} dibedakan menjadi dua ada yang garis lurus dan ada yang garis putus - putus. Bedanya jika garis lurus maka mata kuliah tertentu memiliki syarat lulus sedangkan garis putus - putus menandakan bahwa syaratnya tempuh.
@@ -43,4 +43,8 @@ Untuk membuat pohon kurikulum dibutuhkan \textit{library} sebagai bantuan untuk 
 
 \section{Perancangan Antarmuka Membuat Pohon Kurikulum}
 \label{sec: Perancangan Antarmuka Membuat Pohon Kurikulum}
-Untuk memenuhi kebutuhan interaksi antara pengguna dengan perangkat lunak, maka dirancanglah sebuah antarmuka berupa pohon kurikulum. Rancangan antarmuka dibuat dengan visualsasi menggunakan \textit{viz.js}. 
+Untuk memenuhi kebutuhan interaksi antara pengguna dengan perangkat lunak, maka dirancanglah sebuah antarmuka berupa pohon kurikulum. Rancangan antarmuka dibuat dengan cara membangkitkan menggunakan \textit{viz.js}. Pemanggilan antarmuka dapat dilakukan dengan memanggil \textit {library viz.js} yang akan dipakai. Setelah itu pada saat pemanggilan antarmuka dapat diatur bentuk dan keluaran yang akan dipakai untuk membangkitkan pohon kurikulum. Beberapa opsi parameter yang dapat digunakan untuk merubah tampilan dari graf yang akan ditampilkan, yaitu:
+\begin{itemize}
+\item \textit{format} menetapkan \textit{format} keluaran, dan hasilnya salah satu dari "svg", "xdot", "plain", "ps", "json", atau "png-image-element". 
+\item \textit{engine}, mengatur mesin \textit{Graphviz} untuk digunakan, salah satunya "circo", "dot", "fdp", "neato", "osage", or "twopi".
+\end{itemize}  
