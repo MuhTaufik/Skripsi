@@ -3,14 +3,13 @@
 
 Pada bab ini akan dibahas mengenai perancangan perangkat lunak yang diimplementasi pada pohon kurikulum.
 
-\section{Kebutuhan Masukan dan Pengeluaran}
-\label{sec: Kebutuhan Masukan dan Pengeluaran}
-Perancangan perangkat lunak pohon kurikulum dengan membangkitkan dari JSON ke \textit{DOT}. Masukan perangkat lunak merupakan kode, nama, prasyarat, sks, semester, dan wajib.
-Kebutuhan input dan output perangkat lunak:
+\section{Kebutuhan Masukan dan Keluaran}
+\label{sec: Kebutuhan Masukan dan Keluaran}
+Pada perancangan perangkat lunak pohon kurikulum dilakukan dengan membangkitkan dari JSON ke \textit{DOT}. Kebutuhan masukan dan keluaran perangkat lunak sebagai berikut:
 \begin{itemize}
 \item Masukan \\
-Kebutuhan \textit{input} pada pohon kurikulum adalah
 \begin{enumerate}
+\item \textbf{data JSON}, berisikan pernyataan JSON yang dipakai sebagai acuan dalam membangkitkan \textit{DOT}. data JSON dapat dilihat di lampiran B atau pada bab 3.1.
 \item \textbf{semester}, berisikan urutan semester 1 sampai semester 8.
 \item \textbf{kode}, berisikan kode mata kuliah.
 \item \textbf{nama}, berisikan nama mata kuliah.
@@ -18,7 +17,7 @@ Kebutuhan \textit{input} pada pohon kurikulum adalah
 \item \textbf{prasyarat}, isinya syarat tempuh atau lulus dari setiap mata kuliah.
 \end{enumerate}
 \item Keluaran\\
-Output dari perangkat lunak adalah pohon kurikulum yang visualisasinya menggunakan \textit{viz.js}. Pohon kurikulum akan menampilkan node semester 1 sampai semester 8. Kemudian di setiap semesternya terdapat node yang berisikan kode, sks, dan nama matakuliah. Matakuliah yang ditampilka berupa matakuliah.
+Keluaran dari perangkat lunak adalah pohon kurikulum yang visualisasinya menggunakan \textit{viz.js}. Pohon kurikulum akan menampilkan node semester 1 sampai semester 8. Kemudian di setiap semesternya terdapat node yang berisikan kode, sks, dan nama matakuliah. Matakuliah yang ditampilka berupa matakuliah.
 \end{itemize}
 
 \section{Perancangan Perangkat Lunak Pohon Kurikulum}
@@ -41,10 +40,11 @@ Untuk membuat pohon kurikulum dibutuhkan \textit{library} sebagai bantuan untuk 
 \end{enumerate}
 
 
-\section{Perancangan Antarmuka Membuat Pohon Kurikulum}
-\label{sec: Perancangan Antarmuka Membuat Pohon Kurikulum}
-Untuk memenuhi kebutuhan interaksi antara pengguna dengan perangkat lunak, maka dirancanglah sebuah antarmuka berupa pohon kurikulum. Rancangan antarmuka dibuat dengan cara membangkitkan menggunakan \textit{viz.js}. Pemanggilan antarmuka dapat dilakukan dengan memanggil \textit {library viz.js} yang akan dipakai. Setelah itu pada saat pemanggilan antarmuka dapat diatur bentuk dan keluaran yang akan dipakai untuk membangkitkan pohon kurikulum. Beberapa opsi parameter yang dapat digunakan untuk merubah tampilan dari graf yang akan ditampilkan, yaitu:
-\begin{itemize}
-\item \textit{format} menetapkan \textit{format} keluaran, dan hasilnya salah satu dari "svg", "xdot", "plain", "ps", "json", atau "png-image-element". 
-\item \textit{engine}, mengatur mesin \textit{Graphviz} untuk digunakan, salah satunya "circo", "dot", "fdp", "neato", "osage", or "twopi".
-\end{itemize}  
+\section{Perancangan Antarmuka Pohon Kurikulum}
+\label{sec: Perancangan Antarmuka Pohon Kurikulum}
+Untuk memenuhi kebutuhan interaksi antara pengguna dengan perangkat lunak, maka dirancanglah sebuah antarmuka berupa pohon kurikulum. Rancangan antarmuka dibuat dengan cara membangkitkan menggunakan \textit{viz.js}. Setelah itu pada saat pemanggilan antarmuka dapat diatur bentuk dan keluaran yang akan dipakai untuk membangkitkan pohon kurikulum. Beberapa opsi parameter yang dapat digunakan untuk merubah tampilan dari graf yang akan ditampilkan, yaitu dengan menggunakan \textit{engine} yang dapat mengatur mesin \textit{Graphviz} untuk digunakan, salah satunya "circo", "dot", "fdp", "neato", "osage", or "twopi". Selain \textit{engine} ada juga parameter pilihan. parameter ini mengatur apakah mata kuliah pilihan akan ditampilkan atau sebaliknya. Cara pemanggilan pilihan sebagai berikut:
+\begin{lstlisting}
+...... PILIHAN=false
+\end{lstlisting}
+Jika dituliskan seperti itu maka akan menghasilkan pohon kurikulum yang berisikan semester, kode, nama mata kuliah, sks, dan mata kuliah wajib saja sementara mata kuliah pilihan tidak ditampilkan
+

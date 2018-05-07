@@ -3,8 +3,8 @@
 
 Bab ini terdiri atas tiga bagian, yaitu Implementasi Data JSON, Implementasi Perangkat Lunak dan Pengujian Perangkat Lunak. Bagian implementasi data json akan berisi di mana json akan disimpan, lalu implementasi perangkat lunak berisi penjelasan lingkungan pengembangan perangkat lunak. Sedangkan bagian pengujian berisi hasil pengujian fungsional terhadap perangkat lunak yang telah dibangun dan pengujian eksperimental yang isinya percobaan pada setiap \textit{engine} yang digunakan dalam pembuatan pohon kurikulum.
 
-\section{implementasi data json}
-\label{sec: implementasi data json}
+\section{Implementasi Data JSON}
+\label{sec: Implementasi Data JSON}
 
 Dalam pembangunan pohon kurikulum digunakan JSON sebagai data yang akan di olah. JSON dibangkitkan dengan cara di ubah menjadi menjadi \textit{dot}. Setelah di ubah maka dapat dilihat hasilnya berupa grafik yang berbentuk pohon kurikulum. JSON selanjutnya di unggah dan diakses melalui \textit{url} \url{https://github.com/ftisunpar/data} dan dilihat pada bagian prasyarat. Hasil implementasi pada pohon kurikulum isinya bergantung pada hasil implementasi JSON yang di unggah pada \textit{url} tempat JSON disimpan.
 
@@ -40,10 +40,10 @@ Dalam proses membangun perangkat lunak ini digunakan spesifikasi perangkat sebag
 \subsection{Hasil Implementasi}
 \label{sec: Hasil Implementasi}
 
-Kode program pada perangkat lunak ditulis dalam bahasa pemrograman \textit{javascript} dengan cara membangkitkan dari JSON ke \textit{DOT}. Hasil implementasi berupa pohon kurikulum yang visualisasinya menggunakan \textit{viz.js}. Perangkat lunak dapat dilihat seperti gambar di bawah ini.
+Kode program pada perangkat lunak ditulis dalam bahasa pemrograman \textit{javascript} dengan cara membangkitkan dari JSON ke \textit{DOT}. Hasil implementasi berupa pohon kurikulum yang visualisasinya menggunakan \textit{viz.js} dan sudah memakai \textit{engine DOT}. Perangkat lunak dapat dilihat seperti gambar di bawah ini.
 
 \begin{figure}[H]
-		\includegraphics[scale = 0.5]{pohonkurikulum.png}
+		\includegraphics[scale = 0.7]{dot.png}
 		\caption{Hasil Implementasi}
 		\label{fig: pohon kurikulum}
 \end{figure}	 
@@ -82,52 +82,45 @@ menjadi dua yaitu "ok" dan "gagal". Di bawah ini Pengujian fungsi pohon kurikulu
 Pengujian eksperimental dilakukan dengan cara membuat beberapa tugas dalam pembuatan pohon kurikulum. Tujuan yang ingin dicapai dalam pengujian eksperimental ini untuk memastikan seluruh \textit{engine} dapat digunakan perangkat lunak dengan mudah dan sesuai harapan. Metode pengumpulan data dalam pengujian eksperimental ini adalah hasil dari pengujian setiap \textit{engine}. Mengacu pada bab 2 bagian Visualisasi Graf dengan \textit{viz.js} di sana disebutkan \textit{engine} yang dapat digunakan untuk menampilkan grafik.
 
 \begin{enumerate}
-\item \textit{Engine= dot}, akan menghasilkan sebuah grafik seperti gambar di bawah ini.
+\item \textit{Engine= circo}, akan menghasilkan sebuah grafik seperti gambar \ref{fig: circo}.
 \begin{figure}[H]
-		\left
-		\includegraphics[scale = 0.5]{dot.png}
-		\caption{Hasil dot}
-		\label{fig: dot}
-\end{figure}
-
-\item \textit{Engine= circo}, akan menghasilkan sebuah grafik seperti gambar di bawah ini.
-\begin{figure}[H]
-		\left
-		\includegraphics[scale = 0.5]{circo.png}
+		\includegraphics[scale = 0.7]{circo.png}
 		\caption{Hasil circo}
 		\label{fig: circo}
 \end{figure} 
 
-\item \textit{Engine= fdp}, akan menghasilkan sebuah grafik seperti gambar di bawah ini.
+\item \textit{Engine= fdp}, akan menghasilkan sebuah grafik seperti gambar \ref{fig: fdp}.
 \begin{figure}[H]
-		\left
-		\includegraphics[scale = 0.5]{fdp.png}
+		\includegraphics[scale = 0.6]{fdp.png}
 		\caption{Hasil fdp}
 		\label{fig: fdp}
 \end{figure}
 
-\item \textit{Engine= neato}, akan menghasilkan sebuah grafik seperti gambar di bawah ini.
+\item \textit{Engine= neato}, akan menghasilkan sebuah grafik seperti gambar \ref{fig: neato}.
 \begin{figure}[H]
-		\left
-		\includegraphics[scale = 0.5]{neato.png}
+		\includegraphics[scale = 0.6]{neato.png}
 		\caption{Hasil neato}
 		\label{fig: neato}
 \end{figure}
 
-\item \textit{Engine= osage}, akan menghasilkan sebuah grafik seperti gambar di bawah ini.
+\item \textit{Engine= osage}, akan menghasilkan sebuah grafik seperti gambar \ref{fig: osage}.
 \begin{figure}[H]
-		\left
 		\includegraphics[scale = 0.5]{osage.png}
 		\caption{Hasil osage}
 		\label{fig: osage}
+		\\
+		\\
+		\\
 \end{figure}
 
-\item \textit{Engine= twopi}, akan menghasilkan sebuah grafik seperti gambar di bawah ini.
+\item \textit{Engine= twopi} akan menghasilkan sebuah grafik seperti gambar \ref{fig: twopi}.
 \begin{figure}[H]
-		\left
-		\includegraphics[scale = 0.5]{twopi.png}
+		\centering
+		\includegraphics[scale = 0.6]{twopi.png}
 		\caption{Hasil twopi}
 		\label{fig: twopi}
 \end{figure}
 
 \end{enumerate}
+
+Setelah mencoba pengujian eksperimental maka didapatkan hasil seperti gambar - gambar di atas. Penggunaan \textit{engine} yang berbeda dapat menampilkan hasil grafik yang berbeda. Dari \textit{engine} yang telah dicoba maka didapatkan bahwa penggunaan \textit{engine DOT} adalah yang terbaik, karena hasil yang dikeluarkan DOT memiliki \textit{layout} yang mudah dibaca. Pada saat percobaan dilakukan hasil yang dikeluarkan hanya mata kuliah wajib saja. Mata kuliah pilihan tidak dikeluarkan karena hasilnya yang tidak mencukupi lembar a4 tetapi jika hasil dari implementasi dicetak maka hasilnya akan memanjang dan dari hasil yang telah ditampilkan akan terlihat kesalahan yang ada pada dokumen kurikulum 2018 versi 0.97.
