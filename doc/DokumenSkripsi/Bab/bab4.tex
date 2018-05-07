@@ -44,7 +44,7 @@ Untuk membuat pohon kurikulum dibutuhkan \textit{library} sebagai bantuan untuk 
 \label{sec: Perancangan Antarmuka Pohon Kurikulum}
 Untuk memenuhi kebutuhan interaksi antara pengguna dengan perangkat lunak, maka dirancanglah sebuah antarmuka berupa pohon kurikulum. Rancangan antarmuka dibuat dengan cara membangkitkan menggunakan \textit{viz.js}. Setelah itu pada saat pemanggilan antarmuka dapat diatur bentuk dan keluaran yang akan dipakai untuk membangkitkan pohon kurikulum. Beberapa opsi parameter yang dapat digunakan untuk merubah tampilan dari graf yang akan ditampilkan, yaitu dengan menggunakan \textit{engine} yang dapat mengatur mesin \textit{Graphviz} untuk digunakan, salah satunya "circo", "dot", "fdp", "neato", "osage", or "twopi". Selain \textit{engine} ada juga parameter pilihan. parameter ini mengatur apakah mata kuliah pilihan akan ditampilkan atau sebaliknya. Cara pemanggilan pilihan sebagai berikut:
 \begin{lstlisting}
-...... PILIHAN=false
+...... PILIHAN=false //sebelum PILIHAN di isi url untuk memanggil PILIHAN
 \end{lstlisting}
 Jika dituliskan seperti itu maka akan menghasilkan pohon kurikulum yang berisikan semester, kode, nama mata kuliah, sks, dan mata kuliah wajib saja sementara mata kuliah pilihan tidak ditampilkan
 
