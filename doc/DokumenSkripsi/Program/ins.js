@@ -1,23 +1,22 @@
 var Viz = require("viz.js");
 var http = require('http');
-var https = require('https');
-var kurikulum = require("./kurikulum.json");
+var axios = require('axios');
+//axios library buat http req, karena untuk ngakses data raw di github perlu req data melalui http
 
 http.createServer(function (req, res) {
-    // http.get("http://raw.githubusercontent.com/ftisunpar/data/master/prasyarat.json", function(data) {
-    //     console.log(data)
-    // })
-    // console.log(kurikulum)
-    var graphDot = [
-        "digraph G {",
-        rankSep(kurikulum),
-        nodesMatkul(kurikulum),
-        edgesMatkul(kurikulum),
-        "}",
-      ].join("\n");
-      var resultGraph = Viz(graphDot, { format: "svg"});
-      res.write(resultGraph);
-      res.end();
+    axios.get("http://raw.githubusercontent.com/ftisunpar/data/master/prasyarat.json")
+        .then(function (data) {
+            var graphDot = [
+                "digraph G {",
+                rankSep(data.data),
+                nodesMatkul(data.data),
+                edgesMatkul(data.data),
+                "}",
+              ].join("\n");
+              var resultGraph = Viz(graphDot, { format: "svg"});
+              res.write(resultGraph);
+              res.end();
+        })
 }).listen(8001);
 
 function rankSep(data) {
