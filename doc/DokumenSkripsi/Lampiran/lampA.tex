@@ -16,17 +16,26 @@
 
 
 \begin{lstlisting}[language=Javascript, caption=indexs.js]
-var Viz = require("viz.js");
+var Viz = require('viz.js');
 var http = require('http');
 var axios = require('axios');
 
-var engine = process.env.ENGINE || "dot";
-var pilihan = process.env.PILIHAN || "true";
-
-console.log(process.env)
+var engine, pilihan, resultGraph;
 
 http.createServer(function (req, res) {
-  axios.get("http://raw.githubusercontent.com/ftisunpar/data/master/prasyarat.json") 
+  var params = req.url.substring(req.url.lastIndexOf('?') + 1).split('&');
+  for (var i = 0; i < params.length; i++) {
+    var paramKeyValPair = params[i].split('=');
+    if (paramKeyValPair[0] === 'engine') {
+      engine = paramKeyValPair[1];
+    } else if (paramKeyValPair[0] === 'pilihan') {
+      pilihan = paramKeyValPair[1];
+    } else {
+      engine = 'dot';
+      pilihan = 'false';
+    }
+  }
+  axios.get("http://raw.githubusercontent.com/ftisunpar/data/master/prasyarat.json")
     .then(data => {
       var graphDot = [
         "digraph G {",
@@ -35,7 +44,6 @@ http.createServer(function (req, res) {
         edgesMatkul(data.data),
         "}",
       ].join("\n");
-      var resultGraph;
       switch (engine) {
         case "circo":
           resultGraph = Viz(graphDot, { format: "svg", engine: "circo" });
@@ -59,7 +67,7 @@ http.createServer(function (req, res) {
       res.write(resultGraph);
       res.end();
     })
-}).listen(8000);
+}).listen(8001);
 
 function rankSep(data) {
   var rankMatkulWajibSemester = [];
@@ -188,7 +196,6 @@ function edgesMatkul(data) {
   }
   return edgeMatkul.join("");
 }
-
 \end{lstlisting}
 
  
