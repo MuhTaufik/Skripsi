@@ -1,138 +1,13 @@
 
 \chapter{Dasar Teori}
 \label{chap:Dasar Teori}
-Pada bab ini akan diuraikan teori-teori yang berhubungan dengan pembangunan pohon kurikulum. Teori-teori tersebut adalah teori tentang pengertian graf,data terbuka, JSON, \textit{DOT language}, dan visualisasi pohon menggunakan \textit{viz.js}.
+Pada bab ini diuraikan teori-teori yang berhubungan dengan pembangunan pohon kurikulum. Teori-teori tersebut adalah teori tentang pengertian Data Mata Kuliah Kurikulum, JSON, \textit{DOT language}, dan visualisasi pohon menggunakan \textit{viz.js}.
 
-\section{Graf}
-\label{sec: Graf}
-
-\subsection{Definisi Graf}
-\label{sec: Definisi Graf}
-Suatu graf didefinisikan oleh himpunan verteks dan himpunan sisi \textit{(edge)}.~\cite{munir:02:graf}
-\footnote{"Graf", Matematika Diskrit, Juli 2015}
-Verteks menyatakan entitas-entitas data dan sisi menyatakan keterhubungan antara
-verteks. Biasanya untuk suatu graf G digunakan notasi matematis. 
-\begin{lstlisting}
-G=(V,E)
-G = Graf
-V = Simpul atau verteks
-E = Sisi atau garis
-\end{lstlisting}
-
-V adalah himpunan verteks dan E himpunan sisi yang terdefinisi antara pasangan-pasangan verteks. Sebuah sisi antara verteks x dan y ditulis {x, y}. Suatu graf H = (V1,E1) disebut subgraf dari graf G jika V1 adalah himpunan bagian dari V dan E1 himpunan bagian dari E.
-\subsection{Istilah dalam Graf}
-\label{sec: Istilah dalam Graf}
-\begin{enumerate}
-\item \textit{Incident}\\
-Jika e merupakan busur dengan simpul-simpulnya adalah v dan w yang
-ditulis e=(v,w), maka v dan w disebut "terletak" pada e, dan e disebut incident
-dengan v dan w.
-\item \textit{Degree}\\
-Di dalam Graf ada yang disebut dengan \textit{Degree}, \textit{Degree} mempuyai 3 jenis antara lain :
-\begin{itemize}
-\item Degree dari suatu verteks x dalam \textit{undigraph} adalah jumlah busur yang
-incident dengan simpul tersebut.
-\item Indegree dari suatu verteks x dalam digraf adalah jumlah busur yang
-kepalanya incident dengan simpul tersebut, atau jumlah busur yang "masuk" atau menuju simpul tersebut.
-\item Outdegree dari suatu verteks x dalam digraf adalah jumlah busur yang
-ekornya incident dengan simpul tersebut, atau jumlah busur yang "keluar"
-atau berasal dari simpul tersebut.
-\end{itemize}
-\item \textit{Adjacent}\\
-Pada graf tidah berarah, 2 buah simpul disebut adjacent bila ada busur yang
-menghubungkan kedua simpul tersebut. Simpul v dan w disebut adjacent. 
-Pada graf berarah, simpul v disebut adjacent dengan simpul w bila ada busur
-dari w ke v.
-\item \textit{Successor dan Predecessor}\\
-Pada graf berarah, bila simpul v \textit{adjacent} dengan simpul w, maka simpul v adalah \textit{successor} simpul w, dan simpul w adalah \textit{predecessor} dari simpul v.
-\end{enumerate}
-
-\section{Data Terbuka}
-\label{sec: Data Terbuka}
-
-Teknologi sekarang memungkinkan untuk membangun layanan yang menjawab pertanyaan-pertanyaan secara otomatis.~\cite{open:04:terbuka} \footnote{\url{http://opendatahandbook.org/guide/id/introduction/}} Sebagian besar data yang diperlukan untuk menjawab pertanyaan-pertanyaan dihasilkan oleh badan-badan publik. Namun, seringkali data yang diperlukan belum tersedia dalam bentuk yang mudah digunakan. Gagasan dari data terbuka mengarah kepada informasi di mana setiap orang bebas untuk mengakses dan menggunakan ulang untuk berbagai tujuan - sudah bergulir dalam beberapa tahun ini.  	
-
-\subsection{Apa itu Data Terbuka}
-\label{sec: Apa itu Data Terbuka}
-Data terbuka adalah data yang dapat digunakan secara bebas, dimanfaatkan, dan didistribusikan kembali oleh siapapun tanpa syarat, kecuali dengan mengutip sumber dan pemilik data. Selain itu, seluruh data yang dipublikasikan harus mengikuti peraturan perundang-undangan yang berlaku. Kriteria penting dari data terbuka adalah:
-\begin{enumerate}
-\item Ketersediaan dan Akses
-Data harus tersedia utuh dan bebas biaya. Akan lebih baik jika data dapat diunduh melalui internet. Data juga harus tersedia dalam bentuk yang mudah digunakan dan dapat diolah kembali.
-\item Penggunaan dan Pendistribusian 
-Data yang digunakan dan didistribusikan kembali harus memenuhi syarat-syarat yang telah ditentukan.
-\item Partisipasi Universal
-Setiap orang bebas menggunakan dan mendistribusikan kembali \textit{dataset}. Tidak diperkenankan adanya diskriminasi atas bidang usaha, orang, atau kelompok.
-\end{enumerate}
-
-Semua kriteria yang ada di dalam data terbuka sangat penting karena menunjukkan kejelasan tentang apa yang dimaksud dengan terbuka itu sendiri. Istilah yang digunakan untuk menjelaskan ketiga kriteria data terbuka adalah \textit{interoperabilitas}. Interoperabilitas sangat penting karena memungkinkan komponen-komponen yang berbeda untuk bisa bekerja sama. Kemampuan untuk mengkomponenisasi komponen-komponen sangatlah esensial untuk membangun sistem yang besar dan kompleks. Tanpa \textit{interoperabilitas} hal ini menjadi tidak mungkin di mana kemampuan untuk berkomunikasi (lintas operasi) sangat berpengaruh terhadap keberhasilan suatu rencana.
-
-Inti dari sebuah "keumuman" data merupakan salah satu bagian dari materi "terbuka". \textit{Interoperabilitas} ini merupakan komponen penting untuk merealisasikan praktik utama manfaat dari "keterbukaan": Peningkatan dramatis kemampuan untuk mengkombinasikan sekumpulan data berbeda secara bersama-sama sehingga merangsang pengembangan produk dan layanan yang lebih baik. keterbukaan dapat memastikan bahwa ketika ada dua kumpulan data dari dua sumber berbeda, maka kita dapat menggabungkan data tersebut secara bersama-sama, dan memastikan bahwa data yang kita dapat informasinya benar.
-
-\subsection{Mengapa Data Terbuka}
-\label{sec: Mengapa Data Terbuka}
-Data terbuka adalah sumber daya luar biasa yang belum dimanfaatkan sepenuhnya. Banyak individu dan organisasi mengumpulkan berbagai jenis data berbeda dalam rangka untuk melakukan tugas mereka. Pemerintah sangat signifikan dalam hal ini, tidak hanya karena kuantitas dan sentralitas dari data yang dikumpulkan, tetapi juga karena sebagian besar dari data pemerintah adalah bersifat publik secara hukum, dan oleh karena itu bisa dibuat terbuka dan tersedia untuk orang lain untuk dipergunakan. hal itu menjadi menarik karena banyak individu atau kelompok yang ingin mengetahui data yang ada. 
-
-Ada banyak area di mana kita bisa mengharapkan data terbuka untuk menjadi sebuah nilai, dan menjadi contoh bagaimana data terbuka telah digunakan. Ada juga kelompok dengan banyak orang berbeda dan organisasi yang dapat meraih keuntungan dari ketersediaan data yang terbuka, termasuk pemerintah itu sendiri. Pada saat yang sama adalah mustahil untuk memprediksi secara tepat bagaimana dan di mana nilai akan dibuat di masa depan. Sifat alami dari inovasi adalah bahwa pengembangan seringkali datang dari tempat yang tidak mungkin. Hal ini sudah dimungkinkan dengan merujuk pada sejumlah data terbuka yang telah menciptakan nilai. Beberapa nilai ini meliputi: 
-\begin{itemize}
-\item Transparansi dan kendali
-\item Partisipasi
-\item Penguatan mandiri
-\item Inovasi
-\item Efisiensi dan Efektivitas lebih baik dari layanan yang sudah ada
-\item Pengukuran pengaruh dari kebijakan-kebijakan
-\item Pengetahuan baru dari kombinasi sumber data dan pola-pola dalam volume data yang besar
-\end{itemize}
-
-\subsection{Cara Membuka Data}
-\label{sec: Cara Membuka Data}
-Data Terbuka dapat dibuka para pemegang data. Para pemegang data dapat melakukannya secara mendasar, tetapi juga mencakup masalah-masalah yang tersembunyi dan menjebak. Terdapat tiga aturan kunci yang kami rekomendasikan saat membuka data:
-\begin{enumerate}
-\item Jadikan lebih praktis.
-\item Terlibat dari awal dan melibatkan diri sesering mungkin.
-\item Mengatasi kekhawatiran umum dan kesalahpahaman. 
-\end{enumerate}
-
-Ada empat langkah utama dalam membuat data terbuka, yang masing-masing akan dibahas secara rinci di bawah ini. Langkah-langkah tersebut adalah yang paling memungkinkan - banyak dari langkah-langkah tersebut dapat dilakukan secara bersamaan. 
-\begin{enumerate}
-\item \textbf{Pilih Kumpulan Data} \\
-Pemilihan kumpulan-kumpulan data yang direncanakan untuk menjadikannya terbuka merupakan langkah pertama meskipun perlu diingat bahwa seluruh proses pembukaan data akan berulang dan dapat kembali ke langkah ini bila mengalami masalah di kemudian hari. Jika sudah mengetahui persis kumpulan-kumpulan data maka dapat merencanakan untuk dibuka dan dapat langsung ke bagian berikutnya. Bagaimanapun juga, dalam banyak kasus, terutama untuk lembaga-lembaga yang besar, untuk berfokus pada memilih kumpulan data menjadi sebuah tantangan. 
-\item \textbf{Menerapkan sebuah Lisensi Terbuka (Keterbukaan Resmi)} \\
-Di kebanyakan yurisdiksi terdapat hak kekayaan intelektual di dalam data yang mencegah pihak ketiga dari penggunaannya, penggunaan ulang dan pendistribusian data tanpa izin eksplisit. Bahkan di tempat di mana keberadaan hak hukum serba tidak pasti, penting untuk menerapkan lisensi demi sebuah kejelasan. Dengan demikian, jika kita berencana untuk membuat data tersedia, maka harus menaruh lisensi di atasnya dan jika data menjadi terbuka ini bahkan lebih penting lagi. 
-\item \textbf{Menjadikan Data Terseddia}\\
-Data terbuka membutuhkan keterbukaan secara teknis sebagaimana keterbukaan yang resmi secara hukum. Khususnya, data harus bisa tersedia secara masal dalam format (yang dapat dibaca mesin).
-\begin{itemize}
-\item \textbf{Available} \\
-Data seharusnya dihargai tidak lebih dari biaya reproduksi yang wajar, sebaiknya dijadikan sebagai unduhan gratis dari internet. Model penghargaan ini dapat dicapai karena lembaga anda tidak perlu menangani biaya apapun saat menyediakan data untuk digunakan.
-\item \textbf{In Bulk}\\
-Data harus tersedia dalam kumpulan yang lengkap. Jika anda memiliki daftar yang dikoleksi di bawah aturan undang-undang, seluruh daftar tersebut harus tersedia untuk diunduh.
-\item \textbf{In an open, machine-readable format}\\
-Penggunaan-ulang data yang disediakan oleh sektor publik tidak seharusnya tunduk pada pembatasan paten. 
-\item \textbf{Jadikan hingga Mudah untuk ditemukan} \\
-terbitkan di web dan mungkin kelola sebuah pusat katalog untuk membuat daftar dari kumpulan data terbuka.
-\end{itemize}
-\end{enumerate}
-
-\section{\textit{Creative Commons}}
-\label{sec: Creative Commons}
-
-\textit{Creative commons} bisa diartikan sebagai suatu organisasi tidak menguntungkan yang memiliki tujuan untuk memperluas cakupan karya kreatif sehingga karya tersebut legal untuk digunakan orang lain secara gratis tanpa mengurangi esensi hak cipta bagi sang pencipta karya tersebut. ~\cite{creativecommons:06:lisensi}Dalam hal ini lisensi \textit{creative commons} akan menyediakan standar bagi pemegang hak cipta untuk memberikan izin pada orang lain yang ingin menggunakan hasil karyanya. Umunya file-file berlisensi CC berada dalam domain publik seperti di \textit{youtube}, forum dan \textit{website} yang sudah memiliki izin pendistribusian dari pemilikinya.
-
-\textit{Creative commons} itu sendiri terbagi dalam empat macam jenis lisensi karya hak cipta orang lain. Berikut adalah tiga macam jenis lisensi \textit{Creative Commons} 
-
-\begin{enumerate}
-\item \textbf{CC-NC (Creative Commons non-commercial)} \\
-\textit{Creative Commons non-commercial} adalah Mengizinkan orang lain menyalin, mendistribusikan, menampilkan, serta membuat karya turunan berdasarkan suatu karya hanya untuk tujuan nonkomersial. Artinya jika anda mengunduh sebuah file yang lisensinya CC-NC lalu ingin mereupload ke \textit{platform} yang diinginkan maka tidak bisa menghasilkan uang dari video tersebut. 
-
-\item \textbf{ CC-SA (Creative Commons share-alike)} \\
-\textit{Creative Commons share-alike} adalah Mengizinkan orang lain untuk mendistribusikan suatu karya turunan hanya di bawah suatu lisensi yang identik dengan lisensi yang diberikan pada karya aslinya. Sebagai contoh anda ingin mengabungkan beberapa file, maka di dalam file tersebut anda hanya boleh menggabung file yang memberi izin tertulis kepada anda. Misalnya yang memberi lisensi media x maka seluruh file bersumber dari media x.
-
-\item \textbf{CC-BY (Creative Commons Attribution)}\\
-\textit{Creative Commons attribution} adalah suatu lisensi yang mengizinkan orang lain untuk menyalin, mendistribusikan, menampilkan, serta membuat karya turunan berdasarkan suatu karya hanya jika orang tersebut memberikan penghargaan pada pencipta atau pemberi lisensi dengan cara yang disebutkan dalam lisensi. Sebagai contoh anda menemukan file yang berada dalam domain publik tapi dalam keterangannya file tersebut lisensinya adalah CC-BY, anda diharuskan memberi kredit kepada sang pemilik file, biasanya kredit dalam bentuk \textit{Title}, Kredit \textit{scroll} baik di akhir file maupun di awal file. Jenis CC-BY yang satu ini bebas dipakai.
-\end{enumerate}
+\section{Data Mata Kuliah Kurikulum}
+\label{sec: Data Mata Kuliah Kurikulum}
 
 
-
-\section{\textit{JSON}}
+\section{JSON}
 \label{sec: JSON}
 
 JSON \textit{(JavaScript Object Notation)} adalah format pertukaran data. \textit{JSON} merupakan format teks yang tidak bergantung pada bahasa pemprograman apapun.\footnote{"JSON", \url{https://www.json.org/json-id.html}} Kenapa \textit{JSON}? Karena ukuran datanya lebih kecil dibanding dengan \textit{XML}, sifatnya \textit{"self-describing"} dan mudah dimengerti. Formatnya berbasis teks dan terbaca manusia serta digunakan untuk mempresentasikan struktur data sederhana. Format teks dari JSON itu sendiri identik dengan kode untuk membuat objek \textit{JavaScript} memiliki kesamaan dengan \textit{Javascript}, hanya saja \textit{JSON} lebih mudah dimengerti. 
@@ -147,28 +22,28 @@ JSON terbuat dari dua struktur:
 
 \textit{JSON} menggunakan bentuk sebagai berikut:
 \begin{enumerate}
-\item \textbf{Objek} adalah sepasang nama/nilai yang tidak terurutkan. Objek dimulai dengan { (kurung kurawal buka) dan diakhiri dengan } (kurung kurawal tutup). Setiap nama diikuti dengan : (titik dua) dan setiap pasangan nama/nilai dipisahkan oleh , (koma).
+\item \textbf{Objek} adalah sepasang nama/nilai yang tidak terurutkan. Objek dimulai dengan "{" dan "}". Setiap nama diikuti dengan ":: dan setiap pasangan nama/nilai dipisahkan oleh ",". Contohnya seperti pada Gambar \ref{fig: objek}.
 \begin{figure}[H]
 		\centering
 		\includegraphics[scale = 0.5]{1.png}
-		\caption{Objek}
-		\label{}
+		\caption{JSON berbentuk Objek}
+		\label{fig: objek}
 \end{figure}	
 
-\item \textbf{Larik} adalah kumpulan nilai yang terurutkan. Larik dimulai dengan [ (kurung kotak buka) dan diakhiri dengan ] (kurung kotak tutup). Setiap nilai dipisahkan oleh , (koma).
+\item \textbf{Larik} adalah kumpulan nilai yang terurutkan. Larik dimulai dengan "[" dan diakhiri dengan "]". Setiap nilai dipisahkan oleh ",". Contohnya seperti pada Gambar \ref{fig: larik}.
 \begin{figure}[H]
 		\centering
 		\includegraphics[scale = 0.5]{2.png}
-		\caption{Larik}
-		\label{}
+		\caption{JSON berbentuk Larik}
+		\label{fig: larik}
 \end{figure}	
 
-\item \textbf{Nilai}, dapat berupa sebuah \textit{string} dalam tanda kutip ganda, atau angka, atau true atau false atau null, atau sebuah objek atau sebuah larik. Struktur-struktur tersebut dapat disusun bertingkat.
+\item \textbf{Nilai}, dapat berupa sebuah \textit{string} dalam tanda kutip ganda, atau angka, atau true atau false atau null, atau sebuah objek atau sebuah larik. Struktur-struktur tersebut dapat disusun bertingkat. Contohnya seperti pada Gambar \ref{fig: nilai}.
 \begin{figure}[H]
 		\centering
 		\includegraphics[scale = 0.5]{3.png}
-		\caption{Nilai}
-		\label{}
+		\caption{Nilai yang dapat dimasukan ke dalam JSON}
+		\label{fig: nilai}
 \end{figure}	
 
 
@@ -196,13 +71,13 @@ Contoh berikut menunjukkan representasi JSON untuk suatu objek yang mendeskripsi
 \section{DOT Language}
 \label{sec: DOT Language}
 
-\textit{DOT} adalah bahasa yang dapat digunakan untuk menampilkan grafik secara teks, sehingga dapat diproses melalui titik untuk membuat grafik sebagai representasi grafis dalam format yang berbeda seperti .ps, .pdf, dll.~\cite{north:03:DOT} \footnote{"Drawing Graphs with DOT", E Koutsofios, S North - 1991} DOT telah dikembangkan sebagai bagian dari proyek \textit{Graphviz}, yang merupakan kumpulan alat untuk visualisasi grafik. 
+\textit{DOT} adalah bahasa yang dapat digunakan untuk menampilkan grafik secara teks, sehingga dapat diproses melalui titik untuk membuat grafik sebagai representasi grafis dalam format yang berbeda seperti .ps, .pdf, dll.~\cite{north:03:DOT} DOT telah dikembangkan sebagai bagian dari proyek \textit{Graphviz}, yang merupakan kumpulan alat untuk visualisasi grafik. 
 
 \subsection{Dasar Menggambar Graf}
 \label{sec: Dasar Menggambar Graf}
 Dot mengambil empat langkah utama dalam menggambar grafik. Langkah pertama menetapkan diskrit peringkat ke node dalam gambar atas ke bawah, menentukan peringkat di koordinat Y. Tepi yang membentang lebih banyak dari satu peringkat dipecah menjadi rantai simpul dan tepi unit. Langkah kedua \textit{node} dalam barisan untuk menghindari penyeberangan. Langkah ketiga menetapkan koordinat \textit{node} X untuk disimpan dibaris terpendek. Langkah terakhir rute tepi splines. Grafik menggunakan dot memiliki tiga jenis \textit{item}: grafik, simpul, dan tepi. Grafik sendiri memiliki dua bentuk yaitu grafik (tidak diarahkan) atau digraf (diarahkan). Karena dot membuat \textit{layout} grafik yang diarahkan maka contoh dalam kasus ini menggunakan digraf. 
 
-Gambar graf1 adalah contoh grafik dalam bahasa dot. Baris 1 memberi nama dan jenis grafik. Baris berikut membuat node, tepi, atau subgraf, dan atur atribut. Nama merupakan \textit{identifier} C, nomor, atau kutipan C. Sebuah simpul diciptakan pertama kali namanya muncul di \textit{file}. Tepian dibuat saat node berada bergabung dengan operator tepi ->. Pada contoh, baris 2 membuat tepi lalu mengurai dari \textit{parse} ke \textit{execute}. Untuk menjalankan dot pada file ini (dimisalkan graf1.dot) dapat mengetikan $ dot -Tps graf1.dot -o graf1.ps $ dan akan menghasilkan gambar graf1. 
+Gambar \ref{fig: contoh} adalah contoh grafik dalam bahasa dot. Baris 1 memberi nama dan jenis grafik. Baris berikut membuat node, tepi, atau subgraf, dan atur atribut. Nama merupakan \textit{identifier} C, nomor, atau kutipan C. Sebuah simpul diciptakan pertama kali namanya muncul di \textit{file}. Tepian dibuat saat node berada bergabung dengan operator tepi ->. Pada contoh, baris 2 membuat tepi lalu mengurai dari \textit{parse} ke \textit{execute}. Untuk menjalankan dot pada file ini (dimisalkan graf1.dot) dapat mengetikan $ dot -Tps graf1.dot -o graf1.ps $ dan akan menghasilkan Gambar \ref{fig: contoh}. 
 \begin{lstlisting}
 1: digraph G {
 2: main -> parse -> execute;
@@ -219,13 +94,20 @@ Gambar graf1 adalah contoh grafik dalam bahasa dot. Baris 1 memberi nama dan jen
 \begin{figure}[H]
 		\centering
 		\includegraphics[scale = 0.5]{graph1.png}
-		\caption{Gambar Graf 1}
-		\label{}
+		\caption{Contoh sederhana penggunaan graf}
+		\label{fig: contoh}
 \end{figure}	
+
+Penjelasan sintaks di atas sebagai berikut:
+\begin{enumerate}
+\item \textbf{Digraph}, berfungsi untuk menunjukkan bahwa isi dari sintaks di atas akan berbentuk graf.
+\item Pada sintaks terdapat kata-kata seperti \textit{main, parse, int,} dan lainnya. Kata-kata tersebut menunjukkan \textit{node} pada graf.
+\item Setelah mengetahui \textit{node}, maka terdapat tanda "->" yang menunjukkan \textit{edge} dari setiap \textit{node}.
+\end{enumerate}
 
 \subsection{Subgraf dan Pengelompokan}
 \label{sec: Subgraf dan Pengelompokan}
-Subgraf memiliki tiga peran di \textit{Graphviz}. Pertama, subgraf dapat digunakan untuk mewakili struktur grafik, yang menunjukkan bahwa simpul dan tepi tertentu harus dikelompokkan bersama. Informasi pada subgraf ditentukan secara semantik tentang komponen grafik. Tepi dibuat dari setiap simpul di sebelah kiri ke setiap simpul di sebelah kanan. Contohnya sebagai berikut 
+Subgraf memiliki tiga peran di \textit{Graphviz}. Pertama, subgraf dapat digunakan untuk mewakili struktur grafik, yang menunjukkan bahwa simpul dan tepi tertentu harus dikelompokkan bersama. Informasi pada subgraf ditentukan secara semantik tentang komponen grafik. Tepi dibuat dari setiap simpul di sebelah kiri ke setiap simpul di sebelah kanan. Contohnya sebagai berikut:
 \begin{lstlisting}
 A -> {B C} 
 
@@ -233,6 +115,16 @@ sama dengan
 A -> B
 A -> C
 \end{lstlisting}
+
+Pada saat menjalankan sintaks di atas akan menghasilkan Gambar \ref{fig: subgraf}.
+
+\begin{figure}[H]
+		\centering
+		\includegraphics[scale = 0.3]{cA.png}
+		\caption{Contoh sederhana subgraf}
+		\label{fig: subgraf}
+\end{figure}	
+
 
 Kedua, subgraf dapat memberikan konteks untuk mengatur atribut. Sebagai contoh, sebuah subgraf dapat menentukan bahwa warna biru adalah warna \textit{default} untuk semua node yang didefinisikan di dalamnya. Dalam konteks gambar grafik, contohnya sebagai berikut
 
@@ -353,19 +245,19 @@ JSON sebagai salah satu format terbuka digunakan untuk membuat graf. Graf ini di
 \textit{install viz.js} di \url{https://github.com/mdaines/viz.js/releases}.\footnote{"viz", \url{https://github.com/mdaines/viz.js/releases}} Lalu data tersebut
 diletakan pada \textit{file} yang akan digunakan. Berikut adalah contoh dalam menggunakan viz.js.
 \begin{lstlisting}
-<html>
-    <body>
-        <div id="graph"></div>
-        <script src="assets/js/jquery.js"></script>
-        <script src="assets/js/viz.js"></script>
-        <script>
-            $.get('kurikulum.dot', function (res) {
-                var graph = Viz(res, { format: "svg", engine: "dot" });
-                $("#graph").append(graph);
-            })
-        </script>
-    </body>
-</html>
+1. <html>
+2.    <body>
+3.      <div id="graph"></div>
+4.        <script src="assets/js/jquery.js"></script>
+5.        <script src="assets/js/viz.js"></script>
+6.        <script>
+7.            $.get('kurikulum.dot', function (res) {
+8.                var graph = Viz(res, { format: "svg", engine: "dot" });
+9.                $("#graph").append(graph);
+10.            })
+11.        </script>
+12.    </body>
+13. </html>
 \end{lstlisting}
 
 Terdapat beberapa opsi parameter yang dapat digunakan untuk merubah tampilan dari graf
@@ -376,3 +268,5 @@ yang akan ditampilkan, yaitu:
 \end{itemize}
 
 
+\section{Graf}
+\label{sec: graf}

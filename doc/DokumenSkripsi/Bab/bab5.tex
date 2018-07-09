@@ -1,41 +1,17 @@
 \chapter{Implementasi dan Pengujian Perangkat Lunak}
 \label{chap: Implementasi dan Pengujian Perangkat Lunak}
 
-Bab ini terdiri atas tiga bagian, yaitu Implementasi Data JSON, Implementasi Perangkat Lunak dan Pengujian Perangkat Lunak. Bagian implementasi data json akan berisi di mana json akan disimpan, lalu implementasi perangkat lunak berisi penjelasan lingkungan pengembangan perangkat lunak. Sedangkan bagian pengujian berisi hasil pengujian fungsional terhadap perangkat lunak yang telah dibangun dan pengujian eksperimental yang isinya percobaan pada setiap \textit{engine} yang digunakan dalam pembuatan pohon kurikulum.
+Bab ini terdiri atas tiga bagian, yaitu Implementasi Data JSON, Implementasi Perangkat Lunak dan Pengujian Perangkat Lunak. Bagian implementasi data JSON akan berisi hasil implementasi perangkat lunak dan pengujian fungsional yang telah dilakukan.
 
 \section{Implementasi Data JSON}
 \label{sec: Implementasi Data JSON}
 
-Dalam pembangunan pohon kurikulum digunakan JSON sebagai data yang akan di olah. JSON dibangkitkan dengan cara di ubah menjadi menjadi \textit{dot}. Setelah di ubah maka dapat dilihat hasilnya berupa grafik yang berbentuk pohon kurikulum. JSON selanjutnya di unggah dan diakses melalui \textit{url} \url{https://github.com/ftisunpar/data} dan dilihat pada bagian prasyarat. Hasil implementasi pada pohon kurikulum isinya bergantung pada hasil implementasi JSON yang di unggah pada \textit{url} tempat JSON disimpan.
+Dalam pembangunan pohon kurikulum digunakan JSON sebagai data pembuat grafik. JSON dibangkitkan dengan cara diubah menjadi \textit{dot}. Hasilnya berupa grafik yang berbentuk pohon kurikulum. JSON selanjutnya diunggah dan diakses melalui \textit{url} \url{https://github.com/ftisunpar/data} dan dapat dilihat pada bagian prasyarat. 
 
 \section{Implementasi Perangkat Lunak}
 \label{sec: Implementasi Perangkat Lunak}
 
-Pada bagian ini akan dibahas mengenai implementasi perangkat lunak yang telah dibangun. Sub bab ini terdiri atas tiga bagian, yaitu lingkungan perangkat lunak, hasil implementasi perangkat lunak, dan Pengujian fungsional.
-
-\subsection{Lingkungan Implementasi Perangkat Lunak}
-\label{sec: Lingkungan Implementasi Perangkat Lunak}
-
-Dalam proses membangun perangkat lunak ini digunakan spesifikasi perangkat sebagai berikut:
-
-\begin{enumerate}
-\item Lingkungan Pembangunan 
-\begin{itemize}
-\item Processor : Intel Corei7-4702MQ 2.2-3.2GHz
-\item RAM : 4.00 GB
-\item Harddisk : 1TB
-\item VGA : NVIDIA GeForce GT 740M
-\item Sistem Operasi Komputer : Windows 10 Education 64-bit
-\end{itemize}
-
-\item Lingkungan Implementasi
-\begin{itemize}
-\item Tools : \textit{Visual Studio Code}
-\item Bahasa Pemrograman : Javascript
-\item Framework : \textit{viz.js}
-\end{itemize}
-
-\end{enumerate}
+Pada bagian ini akan dibahas mengenai implementasi perangkat lunak yang telah dibangun. Sub bab ini terdiri atas dua bagian, yaitu hasil implementasi perangkat lunak dan Pengujian fungsional.
 
 \subsection{Hasil Implementasi}
 \label{sec: Hasil Implementasi}
@@ -75,52 +51,3 @@ menjadi dua yaitu "ok" dan "gagal". Di bawah ini Pengujian fungsi pohon kurikulu
 \end{tabular}
 \end{center}
 \end{table}
-
-\subsection{Pengujian Eksperimental}
-\label{sec: Pengujian Eksperimental}
-
-Pengujian eksperimental dilakukan dengan cara membuat beberapa tugas dalam pembuatan pohon kurikulum. Tujuan yang ingin dicapai dalam pengujian eksperimental ini untuk memastikan seluruh \textit{engine} dapat digunakan perangkat lunak dengan mudah dan sesuai harapan. Metode pengumpulan data dalam pengujian eksperimental ini adalah hasil dari pengujian setiap \textit{engine}. Mengacu pada bab 2 bagian Visualisasi Graf dengan \textit{viz.js} di sana disebutkan \textit{engine} yang dapat digunakan untuk menampilkan grafik.
-
-\begin{enumerate}
-\item \textit{Engine= circo}, akan menghasilkan sebuah grafik seperti gambar \ref{fig: circo}.
-\begin{figure}[H]
-		\includegraphics[scale = 0.7]{circo.png}
-		\caption{Hasil circo}
-		\label{fig: circo}
-\end{figure} 
-
-\item \textit{Engine= fdp}, akan menghasilkan sebuah grafik seperti gambar \ref{fig: fdp}.
-\begin{figure}[H]
-		\includegraphics[scale = 0.6]{fdp.png}
-		\caption{Hasil fdp}
-		\label{fig: fdp}
-\end{figure}
-
-\item \textit{Engine= neato}, akan menghasilkan sebuah grafik seperti gambar \ref{fig: neato}.
-\begin{figure}[H]
-		\includegraphics[scale = 0.8]{neato.png}
-		\caption{Hasil neato}
-		\label{fig: neato}
-\end{figure}
-
-\item \textit{Engine= osage}, akan menghasilkan sebuah grafik seperti gambar \ref{fig: osage}.
-\begin{figure}[H]
-		\includegraphics[scale = 0.5]{osage.png}
-		\caption{Hasil osage}
-		\label{fig: osage}
-		\\
-		\\
-		\\
-\end{figure}
-
-\item \textit{Engine= twopi} akan menghasilkan sebuah grafik seperti gambar \ref{fig: twopi}.
-\begin{figure}[H]
-		\centering
-		\includegraphics[scale = 0.6]{twopi.png}
-		\caption{Hasil twopi}
-		\label{fig: twopi}
-\end{figure}
-
-\end{enumerate}
-
-Setelah mencoba pengujian eksperimental maka didapatkan hasil seperti gambar - gambar di atas. Penggunaan \textit{engine} yang berbeda dapat menampilkan hasil grafik yang berbeda. Dari \textit{engine} yang telah dicoba maka didapatkan bahwa penggunaan \textit{engine DOT} adalah yang terbaik, karena hasil yang dikeluarkan DOT memiliki \textit{layout} yang mudah dibaca. Pada saat percobaan dilakukan hasil yang dikeluarkan hanya mata kuliah wajib saja. Mata kuliah pilihan tidak dikeluarkan karena hasilnya yang tidak mencukupi lembar a4 tetapi jika hasil dari implementasi dicetak maka hasilnya akan memanjang dan dari hasil yang telah ditampilkan akan terlihat kesalahan yang ada pada dokumen kurikulum 2018 versi 0.97.

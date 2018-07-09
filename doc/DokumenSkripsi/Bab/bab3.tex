@@ -1,15 +1,31 @@
 \chapter{Analisis}
 \label{chap: Analsisis}
 
-Berdasarkan hasil studi pustaka yang telah dilakukan, pada bab ini akan dijelaskan hasil analisis
-yang berupa spesifikasi dari perangkat lunak, diagram use-case, skenario.
+Berdasarkan hasil analissa yang telah dilakukan, pada bab ini akan dijelaskan hasil analisis yang berupa format JSON yang akan digunakan, lalu ada analisis perangkat lunak, Analisis Kebutuhan pada Data Terbuka, diagram use-case, skenario.
 
-\section{Analisis JSON yang akan dibuat}
-\label{sec: Analisis JSON yang akan dibuat}
+\section{Analisis JSON yang Digunakan}
+\label{sec: Analisis JSON yang Digunakan}
 
 Struktur JSON yang akan digunakan adalah dalam bentuk array yang di dalamnya memiliki objek.  
-Objek di dalam JSON ini menjadi acuan dalam membuat pohon kurikulum. Contoh penulisan JSON sebagai berikut:
+Objek di dalam JSON ini menjadi acuan dalam membuat pohon kurikulum. 
 
+JSON memiliki beberapa objek yaitu:.
+\begin{enumerate}
+\item \textbf{kode}, berisikan kode matakuliah yang akan di ambil di dalam pembuatan pohon kurikulum.
+\item \textbf{nama}, berisikan nama mata kuliah yang ada di semester 1 sampai semester 8.
+\item \textbf{prasyarat}, prasyarat memiliki 4 isi yaitu:
+\begin{itemize}
+\item \textbf{tempuh}, berisikan kode mata kuliah yang menunjukan mahasiswa sudah mengambil mata kuliah yang menjadi syarat atau belum. 
+\item \textbf{lulus}, berisikan kode mata kuliah yang menunjukan mahasiswa sudah mengambil mata kuliah tersebut dan lulus mata kuliah tersebut.
+\item \textbf{bersamaan}, berisikan kode mata kuliah yang menunjukan mahasiswa dapat mengambil mata kuliah yang memiliki syarat bersamaan dengan mata kuliah yang sudah tempuh.
+\item \textbf{angkatan}, berisikan tahun angkatan yang merepresentasikan berlaku syarat mata kuliah.
+\end{itemize}
+\item \textbf{sks}, Menunjukkan berapa banyak tanggungan belajar mahasiswa.
+\item \textbf{wajib}, Wajib memiliki dua nilai yaitu \textit{true} dan \textit{false}. Jika \textit{true} maka mata kuliah tersebut masuk ke mata kuliah wajib dan jika \textit{false} maka mata kuliah tersebut bernilai pilihan. 
+\item \textbf{semester}, Menunjukkan semester dan mata kuliah yang ada di semester tersebut.
+\end{enumerate}
+
+Contoh penulisan JSON sebagai berikut:
 \begin{lstlisting}
 [
   {
@@ -28,29 +44,30 @@ Objek di dalam JSON ini menjadi acuan dalam membuat pohon kurikulum. Contoh penu
 ]
 \end{lstlisting}
 
-Pada bentuk di atas JSON memiliki beberapa objek sebagai acuan.
-\begin{enumerate}
-\item \textbf{kode}, berisikan kode matakuliah yang akan di ambil di dalam pembuatan pohon kurikulum.
-\item \textbf{nama}, berisikan nama mata kuliah yang ada di semester 1 sampai semester 8.
-\item \textbf{prasyarat}, prasyarat memiliki 4 isi yaitu:
-\begin{itemize}
-\item \textbf{tempuh}, berisikan kode mata kuliah yang menunjukan mahasiswa sudah mengambil mata kuliah yang menjadi syarat atau belum. 
-\item \textbf{lulus}, berisikan kode mata kuliah yang menunjukan mahasiswa sudah mengambil mata kuliah tersebut dan lulus mata kuliah tersebut.
-\item \textbf{bersamaan}, berisikan kode mata kuliah yang menunjukan mahasiswa dapat mengambil mata kuliah yang memiliki syarat bersamaan dengan mata kuliah yang sudah tempuh.
-\item \textbf{angkatan}, berisikan tahun angkatan yang merepresentasikan berlaku syarat mata kuliah.
-\end{itemize}
-\item \textbf{sks}, Menunjukkan berapa banyak tanggungan belajar mahasiswa.
-\item \textbf{wajib}, Jika wajib menunjukan \textit{true} maka mata kuliah tersebut adalah wajib dan jika menunjukan \textit{false} maka mata kuliah tersebut adalah pilihan. 
-\item \textbf{semester}, Menunjukkan semester dan mata kuliah yang ada di semester tersebut.
-\end{enumerate}
+\begin{lstlisting}
+[
+  {
+    "kode": "AIF181101",
+    "nama": "Computational Thinking",
+    "prasyarat": {
+      "tempuh": [],
+      "lulus": [],
+      "bersamaan": [],
+      "angkatan" : []
+    },
+    "sks": 3,
+    "wajib": false,
+    "semester": 1
+  }
+]
+\end{lstlisting}
 
+Pada penulisan data JSON di atas ada dua perbedaan yaitu pada bagian "wajib". Ada dua nilai pada "wajib" yaitu \textit{true} dan \textit{false}. Dua nilai ini untuk menunjukkan mata kuliah masuk ke mata kuliah wajib atau mata kuliah pilihan. 
 
 \section{Analisis Perangkat Lunak yang Dibangun}
 \label{sec: Analisis Perangkat Lunak yang Dibangun}
 Dari pengetahuan yang diperoleh melalui studi pustaka yang dilakukan. Telah ditentukan beberapa analisis untuk membangun Perangkat Lunak Pohon Kurikulum 2018 menggunkan JSON. Berikut beberapa analisis yang telah diambil dari bab 2: 
 \begin{itemize}
-\item \textbf{Menggunakan JSON yang konversikan ke dalam \textit{DOT Language}}\\
-Untuk membuat graf harus dilakukan konversi dari JSON ke dalam \textit{DOT Language}. \textit{DOT Language} sendiri digunakan untuk menghasilkan graf yang akan menampilkan pohon kurikulum. 
 
 \item \textbf{JSON akan disimpan di \url{github.com}}\\
 JSON akan di simpan di \url{https://github.com/ftisunpar/data}. Tujuannya agar JSON menjadi format data terbuka. Setelah disimpan di dalam \textit{github}, data JSON dapat dipakai sebagai data terbuka.
@@ -62,8 +79,8 @@ Perangkat lunak yang akan dibangun akan menghasilkan graf yang berbentuk pohon k
 Perangkat Lunak yang dibangun setelah menghasilkan pohon kurikulum akan menampilkan mata kuliah yang ada di kurikulum baru. Mata Kuliah akan berisi mata kuliah wajib, mata kuliah pilihan, dan mata kuliah pilihan wajib.
 \end{itemize}
 
-\section{Kebutuhan Data Terbuka}
-\label{sec: Kebutuhan Data Terbuka}
+\section{Analisis Kebutuhan Data Terbuka}
+\label{sec: Analisis Kebutuhan Data Terbuka}
 
 Tujuan utama dari Data Terbuka adalah memaksimalkan penggunaan data seluas-luasnya untuk menciptakan suatu nilai tambah. Untuk mencapai hal tersebut, Data Terbuka memberikan dua komponen dari keterbukaan, yaitu: terbuka secara teknis dan terbuka secara legal. 
 
@@ -89,35 +106,14 @@ Dari tipe-tipe lisensi di atas, maka lisensi \textit{Creative Commons} yang disa
 \section{Spesifikasi Perangkat Lunak yang Dibangun}
 \label{sec: Spesifikasi Perangkat Lunak yang Dibangun}
 
-Berawal dari pengetahuan yang diperoleh melalui studi pustaka yang telah dilakukan, maka selanjutnya
-menentukan spesifikasi website perangkat lunak yang akan dibangun. Perangkat lunak ini hanya
-memiliki beberapa spesifikasi, antara lain:
+Berawal dari pengetahuan yang diperoleh melalui studi pustaka yang telah dilakukan, maka selanjutnya menentukan spesifikasi perangkat lunak yang dibangun. Perangkat lunak ini memiliki beberapa spesifikasi, antara lain:
 \begin{itemize}
-\item membaca dari JSON ke dot 
+\item Membaca dari JSON ke \textit{DOT} 
 \item Menggunakan \textit{DOT Language}
 \item Visualisasi menggunakan \textit{viz.js}
 \item Menampilkan graf
 \end{itemize}
 
-\subsection{Use Case dan Skenario}
-\label{sec: Use Case dan Skenario}
 
-\begin{figure}[H]
-		\centering
-		\includegraphics[scale = 0.5]{UseCasePohon.png}
-		\caption{Use Case Pohon Kurikulum}
-		\label{fig: Use Case Pohon Kurikulum}
-\end{figure}	
-
-Berikut keterangan dan skenario dari Gambar \ref{fig: Use Case Pohon Kurikulum}:
-\begin{enumerate}
-\item Nama \textit{use case} : Melihat Pohon Kurikulum \\
-	  Aktor : Mahasiswa 
-	  Deskripsi :  Aktor melihat isi pohon kurikulum 
-	  Prakondisi : Aktor belum mengetahui pohon kurikulum baru 
-	  Skenario normal : Aktor melihat pohon kurikulum
-	  Eksepsi : Aktor telah mengetahui pohon kurikulum yang di pakai di kurikulum baru
-	  
-\end{enumerate}
 
 
